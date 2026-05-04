@@ -1,0 +1,3019 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheerRING — この感動を、永遠に。</title>
+  <meta name="description" content="CheerRINGは、プロレスファンのためのデジタル会員証。応援してきた時間を証として残し、選手のこれからへ届ける。特許取得済み。早期登録無料・先着500名限定。2026年秋クローズドβ開始予定。">
+  <meta property="og:title" content="CheerRING — この感動を、永遠に。">
+  <meta property="og:description" content="プロレスファンのためのデジタル会員証。応援してきた時間を証として残す。特許第7825912号取得済み。先着500名限定・早期登録無料。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://manabu619.github.io/cheerring/">
+  <meta property="og:image" content="https://manabu619.github.io/cheerring/hero_bg2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CheerRING — この感動を、永遠に。">
+  <meta name="twitter:description" content="プロレスファンのためのデジタル会員証。応援してきた時間を証として残す。特許取得済み・先着500名限定・無料登録。">
+  <meta name="twitter:image" content="https://manabu619.github.io/cheerring/hero_bg2.png">
+  <link rel="canonical" href="https://manabu619.github.io/cheerring/">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23c41e3a'/><text x='16' y='24' text-anchor='middle' font-size='22' font-family='serif' fill='%23d4a843'>C</text></svg>">
+  <meta name="theme-color" content="#c41e3a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CheerRING">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "CheerRING",
+        "url": "https://manabu619.github.io/cheerring/",
+        "description": "プロレスを愛するファンのためのデジタル会員証サービス",
+        "founder": { "@type": "Person", "name": "新保学" },
+        "parentOrganization": { "@type": "Organization", "name": "CheerLink / 合同会社小林PF" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "デジタル会員証とは何ですか？難しくないですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "デジタル会員証は、ブロックチェーン技術で証明された応援の記録です。スマートフォンとメールアドレスがあれば利用でき、専門知識や暗号資産の購入は不要です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "費用はどれくらいかかりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "早期アクセス登録は完全無料です。正式サービス開始時の料金体系については、登録いただいたメールアドレスへ優先的にご案内します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "スマートフォンだけで使えますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、スマートフォンのブラウザからご利用いただけます。専用アプリのインストールも不要です。iOS・Androidどちらにも対応しています。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "投機や暗号資産投資とは違うのですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CheerRINGの会員証は、投機・投資を目的とした商品ではありません。「応援の証」と「選手との継続的なつながり」を目的としたファン会員証です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "個人情報はどう扱われますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "早期登録時に収集するのはメールアドレスのみです。第三者への販売・提供は一切行いません。正式リリース案内の送付のみに使用し、いつでも配信停止・削除請求が可能です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "引退した選手や、過去に応援していた選手も対象になりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CheerRINGは現役選手だけのサービスではありません。引退後も選手との継続的なつながりを保てる設計をしており、セカンドキャリアを歩む選手がファンと再び繋がる場として機能します。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    /* ========================================================
+       CheerRING — Pro Wrestling Fan Support Platform
+       Design System v2.0 (visual rebuild)
+       ======================================================== */
+
+    /* ---------- Skip link (accessibility) ---------- */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 9999;
+      padding: .5rem 1.2rem;
+      background: #c41e3a;
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: top .15s;
+    }
+    .skip-link:focus { top: .75rem; }
+
+    /* ---------- Legal modal ---------- */
+    .legal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 10000;
+      overflow-y: auto;
+      padding: 2rem 1rem;
+    }
+    .legal-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+    .legal-modal {
+      background: #111128;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      max-width: 680px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      position: relative;
+      color: rgba(255,255,255,.82);
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+    .legal-modal h2 { font-size: 1.2rem; color: #fff; margin-bottom: 1.5rem; }
+    .legal-modal h3 { font-size: .95rem; color: #d4a843; margin: 1.4rem 0 .4rem; }
+    .legal-modal p { margin-bottom: .8rem; }
+    .legal-close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: rgba(255,255,255,.6);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: .25rem .5rem;
+      border-radius: 4px;
+      transition: color .2s;
+    }
+    .legal-close-btn:hover { color: #fff; }
+
+    /* ---------- Reset & root ---------- */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+      font-feature-settings: 'palt';
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #0a0a1e;
+      background: #06060e;
+      overflow-x: hidden;
+    }
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    :root {
+      --red: #c41e3a;
+      --red-dark: #a01830;
+      --red-deep: #7a1024;
+      --gold: #d4a843;
+      --gold-dark: #b8922a;
+      --gold-deep: #9a7820;
+      --ink: #06060e;
+      --ink-2: #0f0f1e;
+      --ink-3: #1a1a2e;
+      --paper: #ffffff;
+      --paper-2: #f8f8fc;
+      --paper-3: #efeff5;
+      --line: rgba(255,255,255,0.08);
+      --text-mute: rgba(255,255,255,0.62);
+      --text-mute-2: rgba(255,255,255,0.42);
+    }
+
+    /* ---------- Utilities ---------- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Bebas Neue', 'Noto Sans JP', sans-serif;
+      font-size: 12px; letter-spacing: 0.22em; color: var(--red);
+      font-weight: 400;
+    }
+    .eyebrow::before {
+      content: ''; width: 28px; height: 1px;
+      background: linear-gradient(to right, var(--red), transparent);
+    }
+    .eyebrow.gold { color: var(--gold-dark); }
+    .eyebrow.gold::before { background: linear-gradient(to right, var(--gold-dark), transparent); }
+    .eyebrow.light { color: #f4b9c5; }
+    .eyebrow.light::before { background: linear-gradient(to right, #f4b9c5, transparent); }
+
+    h2.section-h2 {
+      font-size: clamp(26px, 3.4vw, 42px);
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: 0.01em;
+      margin: 14px 0 18px;
+    }
+    h2.section-h2 em { color: var(--red); font-style: normal; }
+    h2.section-h2.on-dark { color: #fff; }
+    h2.section-h2.on-dark em { color: var(--gold); }
+
+    .section-body {
+      font-size: 16px; line-height: 2;
+      color: #5a5a72; max-width: 640px;
+    }
+    .section-body.on-dark { color: rgba(255,255,255,0.62); }
+
+    /* fade-in animation for IntersectionObserver */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.is-in { opacity: 1; transform: none; }
+    .reveal.delay-1 { transition-delay: .12s; }
+    .reveal.delay-2 { transition-delay: .24s; }
+    .reveal.delay-3 { transition-delay: .36s; }
+    .reveal.delay-4 { transition-delay: .48s; }
+    .reveal.delay-5 { transition-delay: .60s; }
+
+    /* ===================================================
+       NAV
+       =================================================== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(6,6,14,0.72);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      border-bottom: 1px solid rgba(212,168,67,0.10);
+      transition: background .3s ease, border-color .3s ease;
+    }
+    nav.scrolled {
+      background: rgba(6,6,14,0.94);
+      border-bottom-color: rgba(212,168,67,0.18);
+    }
+    .nav-inner {
+      max-width: 1180px; margin: 0 auto; padding: 14px 32px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .nav-logo-wrap { display: flex; align-items: baseline; gap: 12px; }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold);
+      font-size: 26px; letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+    .nav-tag {
+      color: rgba(255,255,255,0.32); font-size: 10px;
+      letter-spacing: 0.18em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; gap: 30px; }
+    .nav-links a {
+      color: rgba(255,255,255,0.55); text-decoration: none;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+      position: relative; transition: color .2s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -6px;
+      width: 0; height: 1px; background: var(--gold);
+      transition: width .25s ease;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta {
+      background: var(--red); color: #fff;
+      padding: 11px 22px; border-radius: 4px;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 4px 18px rgba(196,30,58,0.32);
+    }
+    .nav-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(196,30,58,0.5);
+    }
+    .nav-burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+    .nav-burger span {
+      display: block; width: 22px; height: 2px; background: #fff;
+      margin: 4px 0; border-radius: 2px; transition: transform .3s, opacity .3s;
+    }
+    @media (max-width: 820px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-burger { display: block; }
+      nav.menu-open .nav-links {
+        display: flex; flex-direction: column; gap: 18px;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(6,6,14,0.98); padding: 24px 32px;
+        border-bottom: 1px solid rgba(212,168,67,0.16);
+      }
+      nav.menu-open .nav-cta {
+        display: inline-block; align-self: flex-start; margin-top: 10px;
+      }
+      nav.menu-open .nav-burger span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+      nav.menu-open .nav-burger span:nth-child(2) { opacity: 0; }
+      nav.menu-open .nav-burger span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    }
+
+    /* ===================================================
+       HERO
+       =================================================== */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      overflow: hidden; isolation: isolate;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('./hero_bg2.webp');
+      background-size: cover; background-position: center 38%;
+      transform: scale(1.05);
+      animation: heroZoom 22s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05) translateY(0); }
+      to   { transform: scale(1.12) translateY(-1.5%); }
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg,
+          rgba(6,6,14,0.85) 0%,
+          rgba(6,6,14,0.45) 38%,
+          rgba(6,6,14,0.65) 70%,
+          rgba(6,6,14,1) 100%);
+    }
+    .hero-spot {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 50% at 50% 50%, rgba(212,168,67,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 38% 28% at 50% 60%, rgba(196,30,58,0.18) 0%, transparent 70%);
+      mix-blend-mode: screen;
+    }
+    .hero-noise {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0.32;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      mix-blend-mode: overlay;
+    }
+    .hero-vignette {
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 95% 80% at 50% 50%, transparent 55%, rgba(0,0,0,0.55) 100%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1100px; margin: 0 auto;
+      padding: 150px 32px 40px;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(196,30,58,0.18);
+      border: 1px solid rgba(196,30,58,0.5);
+      color: #f4b9c5;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 12px; letter-spacing: 0.22em;
+      padding: 7px 16px; border-radius: 2px; margin-bottom: 30px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--red); border-radius: 50%;
+      box-shadow: 0 0 10px var(--red);
+      animation: pulseDot 1.6s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+    .hero-headline {
+      font-size: clamp(30px, 5vw, 60px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      text-shadow: 0 4px 32px rgba(0,0,0,0.65);
+    }
+    .hero-headline em {
+      color: var(--gold);
+      font-style: normal; position: relative;
+      display: inline-block;
+    }
+    .hero-headline em::after {
+      content: ''; position: absolute; left: 0; bottom: 4px;
+      width: 100%; height: 8px;
+      background: linear-gradient(to right, transparent, rgba(212,168,67,0.35), transparent);
+      filter: blur(8px); z-index: -1;
+    }
+    .hero-script {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 400; font-style: normal;
+      color: rgba(255,255,255,0.62);
+      font-size: clamp(14px, 1.35vw, 17px);
+      letter-spacing: 0.18em;
+      margin-bottom: 24px;
+      line-height: 2.1;
+    }
+    .hero-script .dot {
+      display: inline-block; width: 4px; height: 4px;
+      background: var(--gold); border-radius: 50%;
+      margin: 0 14px 4px; vertical-align: middle;
+      opacity: 0.6;
+    }
+    .hero-sub {
+      font-size: clamp(15px, 1.4vw, 17px);
+      color: rgba(255,255,255,0.78);
+      line-height: 2; margin-bottom: 44px;
+      max-width: 540px;
+      font-weight: 400;
+    }
+    .hero-sub strong { color: #fff; font-weight: 600; }
+    .hero-btns { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary {
+      position: relative; display: inline-flex; align-items: center; gap: 10px;
+      background: var(--red); color: #fff;
+      padding: 17px 36px; border-radius: 4px;
+      font-size: 15px; font-weight: 700; letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(196,30,58,0.35);
+      transition: background .2s, transform .15s, box-shadow .2s;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform .65s ease;
+    }
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(196,30,58,0.55);
+    }
+    .btn-primary:hover::before { transform: translateX(100%); }
+    .btn-primary .arrow { transition: transform .25s; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: rgba(255,255,255,0.78);
+      padding: 16px 28px; border-radius: 4px;
+      font-size: 14px; font-weight: 500; letter-spacing: 0.04em;
+      border: 1px solid rgba(255,255,255,0.28);
+      text-decoration: none;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: rgba(212,168,67,0.06); }
+
+    /* hero stats */
+    .hero-stats {
+      position: relative; z-index: 2;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 32px 80px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    }
+    @media (max-width: 700px) { .hero-stats { grid-template-columns: 1fr; gap: 18px; padding-bottom: 56px; } }
+    .stat-item {
+      border-left: 2px solid var(--red);
+      padding-left: 18px;
+    }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 38px; line-height: 1; color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .stat-num span { font-size: 17px; color: var(--gold); margin-left: 4px; }
+    .stat-label {
+      font-size: 11px; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* scroll cue */
+    .scroll-cue {
+      position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+      z-index: 3; color: rgba(255,255,255,0.42);
+      font-size: 10px; letter-spacing: 0.3em;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      pointer-events: none;
+    }
+    .scroll-cue .line {
+      width: 1px; height: 36px; background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 2.2s ease-in-out infinite;
+      transform-origin: top;
+    }
+    @keyframes scrollLine {
+      0% { transform: scaleY(0); opacity: 0; }
+      45% { transform: scaleY(1); opacity: 1; }
+      100% { transform: scaleY(1); opacity: 0; }
+    }
+
+    /* ===================================================
+       PROBLEM (dark)
+       =================================================== */
+    .problem-section {
+      background: var(--ink);
+      padding: 110px 0 100px;
+      position: relative; overflow: hidden;
+    }
+    .problem-section::before {
+      content: ''; position: absolute; top: -1px; left: 0; right: 0; height: 80px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+      pointer-events: none;
+    }
+    .ring-rope {
+      position: absolute; left: 0; right: 0;
+      height: 6px;
+      background:
+        linear-gradient(to bottom,
+          rgba(196,30,58,0.6) 0%,
+          rgba(196,30,58,0.9) 45%,
+          rgba(122,16,36,0.95) 55%,
+          rgba(122,16,36,0.7) 100%);
+      box-shadow: 0 6px 18px rgba(196,30,58,0.25), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .ring-rope.gold {
+      background:
+        linear-gradient(to bottom,
+          rgba(212,168,67,0.55) 0%,
+          rgba(212,168,67,0.9) 45%,
+          rgba(154,120,32,0.95) 55%,
+          rgba(154,120,32,0.7) 100%);
+      box-shadow: 0 6px 18px rgba(212,168,67,0.22), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .ring-rope.top { top: 0; }
+    .ring-rope.bottom { bottom: 0; }
+
+    .problem-section h2 { color: #fff; }
+    .problem-section h2 em { color: var(--red); }
+
+    .problem-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 56px;
+    }
+    @media (max-width: 720px) { .problem-grid { grid-template-columns: 1fr; } }
+    .problem-card {
+      position: relative;
+      background: linear-gradient(150deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 30px 28px;
+      overflow: hidden;
+      transition: transform .3s ease, border-color .3s ease, background .3s ease;
+    }
+    .problem-card::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,168,67,0.4), transparent);
+      transform: scaleX(0); transition: transform .4s ease;
+    }
+    .problem-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,168,67,0.3);
+      background: linear-gradient(150deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+    }
+    .problem-card:hover::after { transform: scaleX(1); }
+    .prob-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .prob-icon.dark-red {
+      background: rgba(196,30,58,0.16);
+      border: 1px solid rgba(196,30,58,0.4);
+      color: #f4b9c5;
+    }
+    .prob-icon.dark-gold {
+      background: rgba(212,168,67,0.14);
+      border: 1px solid rgba(212,168,67,0.4);
+      color: var(--gold);
+    }
+    .prob-icon svg { width: 22px; height: 22px; }
+    .prob-title {
+      font-size: 17px; font-weight: 700; color: #fff;
+      margin-bottom: 10px; letter-spacing: 0.01em;
+    }
+    .prob-body {
+      font-size: 13.5px; color: rgba(255,255,255,0.55);
+      line-height: 1.95;
+    }
+
+    /* strip */
+    .sil-strip { width: 100%; overflow: hidden; line-height: 0; }
+
+    /* ===================================================
+       SOLUTION (white)
+       =================================================== */
+    .white-section { background: var(--paper); }
+    .section-pad { padding: 110px 0 100px; }
+    .center { text-align: center; }
+    .center .section-body { margin-left: auto; margin-right: auto; }
+
+    .solution-flow {
+      display: grid; grid-template-columns: 1fr auto 1.18fr auto 1fr;
+      align-items: stretch; gap: 0;
+      margin: 56px 0 50px;
+    }
+    @media (max-width: 780px) {
+      .solution-flow { grid-template-columns: 1fr; gap: 14px; }
+      .solution-flow .flow-arrow { transform: rotate(90deg); margin: 4px 0; }
+    }
+    .flow-node {
+      background: var(--paper-2);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px;
+      padding: 28px 20px; text-align: center;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .flow-node:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+    .flow-node.center-node {
+      background: linear-gradient(135deg, rgba(196,30,58,0.06), rgba(212,168,67,0.08));
+      border: 1px solid rgba(196,30,58,0.25);
+      transform: scale(1.04);
+      box-shadow: 0 12px 36px rgba(196,30,58,0.10);
+    }
+    .flow-node.center-node:hover { transform: scale(1.04) translateY(-3px); }
+    .flow-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #fff; border: 1px solid rgba(0,0,0,0.06);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .center-node .flow-icon {
+      background: linear-gradient(135deg, var(--red), var(--gold-dark));
+      border: 0;
+      box-shadow: 0 6px 18px rgba(196,30,58,0.3);
+    }
+    .flow-icon svg { width: 26px; height: 26px; color: var(--red); }
+    .center-node .flow-icon svg { color: #fff; }
+    .flow-title { font-size: 15px; font-weight: 700; color: #0a0a1e; margin-bottom: 6px; }
+    .flow-title.accent { color: var(--red); }
+    .flow-desc { font-size: 12.5px; color: #888899; line-height: 1.7; }
+    .flow-arrow {
+      display: flex; align-items: center; justify-content: center;
+      color: var(--red); padding: 0 14px; flex-shrink: 0;
+    }
+    .flow-arrow svg { width: 24px; height: 24px; }
+
+    .pillars {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    @media (max-width: 720px) { .pillars { grid-template-columns: 1fr; } }
+    .pillar {
+      background: linear-gradient(180deg, var(--paper-2), #fff);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px;
+      padding: 26px 22px;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(196,30,58,0.10);
+      border-color: rgba(212,168,67,0.45);
+    }
+    .pillar-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(212,168,67,0.10);
+      border: 1px solid rgba(212,168,67,0.25);
+      color: var(--gold-dark);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+    }
+    .pillar-icon svg { width: 20px; height: 20px; }
+    .pillar-title { font-size: 15px; font-weight: 700; color: var(--gold-deep); margin-bottom: 8px; }
+    .pillar-body { font-size: 12.5px; color: #777788; line-height: 1.85; }
+
+    .patent-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(184,146,42,0.08);
+      border: 1px solid rgba(184,146,42,0.32);
+      color: var(--gold-deep);
+      font-size: 12px; padding: 9px 18px; border-radius: 4px;
+      letter-spacing: 0.04em; font-weight: 500;
+      margin-top: 44px;
+    }
+    .patent-badge svg { width: 14px; height: 14px; }
+
+    /* ===================================================
+       BENEFITS (white)
+       =================================================== */
+    .benefits-section { background: var(--paper-2); padding: 110px 0; position: relative; }
+    .benefit-list { display: flex; flex-direction: column; gap: 16px; margin-top: 56px; }
+    .benefit-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.05);
+      border-left: 4px solid var(--red);
+      border-radius: 0 14px 14px 0;
+      padding: 26px 28px 26px 32px;
+      display: flex; gap: 22px; align-items: flex-start;
+      transition: transform .25s ease, box-shadow .25s ease;
+      overflow: hidden;
+    }
+    .benefit-card::before {
+      content: ''; position: absolute; left: -4px; top: 0; bottom: 0; width: 4px;
+      background: linear-gradient(to bottom, var(--red), var(--red-deep));
+    }
+    .benefit-card.gold-accent { border-left-color: var(--gold); }
+    .benefit-card.gold-accent::before {
+      background: linear-gradient(to bottom, var(--gold), var(--gold-deep));
+    }
+    .benefit-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+    }
+    .benefit-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 38px; line-height: 1;
+      color: var(--red); min-width: 48px; padding-top: 4px;
+      letter-spacing: 0.02em;
+    }
+    .benefit-card.gold-accent .benefit-num { color: var(--gold-dark); }
+    .benefit-content { flex: 1; }
+    .benefit-title {
+      font-size: 16px; font-weight: 700; color: #0a0a1e;
+      margin-bottom: 8px; letter-spacing: 0.01em;
+    }
+    .benefit-desc { font-size: 13.5px; color: #666680; line-height: 1.95; }
+    .benefit-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fce8ec; color: var(--red);
+      font-size: 11px; font-weight: 600;
+      padding: 4px 10px; border-radius: 3px;
+      margin-top: 12px; letter-spacing: 0.08em;
+    }
+    .benefit-card.gold-accent .benefit-tag { background: #fdf3db; color: var(--gold-deep); }
+    .benefit-tag::before {
+      content: ''; width: 5px; height: 5px; background: currentColor; border-radius: 50%;
+    }
+
+    /* ===================================================
+       FOR WHOM (persona cards)
+       =================================================== */
+    .forwhom-section {
+      background: #fff;
+      padding: 90px 0 80px;
+      border-top: 1px solid rgba(196,30,58,.07);
+    }
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 52px;
+    }
+    .persona-card {
+      background: #fafafa;
+      border: 1px solid #eeeef5;
+      border-radius: 12px;
+      padding: 28px 24px 24px;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .persona-card:hover { box-shadow: 0 10px 36px rgba(0,0,0,.07); transform: translateY(-4px); }
+    .persona-top {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+    }
+    .persona-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px; color: #fff; flex-shrink: 0;
+    }
+    .persona-avatar.gold { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: #1a1a2e; }
+    .persona-avatar.ink { background: linear-gradient(135deg, #1a1a2e 0%, #2e2e4e 100%); }
+    .persona-name { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+    .persona-meta { font-size: 12px; color: #9090a8; margin-top: 2px; }
+    .persona-quote {
+      font-size: 14px; color: #4a4a60; line-height: 1.85;
+      border-left: 3px solid var(--red);
+      padding-left: 14px;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+    .persona-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .persona-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .08em;
+      padding: 4px 10px; border-radius: 20px;
+      background: rgba(196,30,58,.08); color: var(--red);
+    }
+    @media (max-width: 760px) {
+      .persona-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===================================================
+   TESTIMONIALS
+   =================================================== */
+.testi-section {
+  background: var(--ink-2);
+  padding: 100px 0 90px;
+  position: relative; overflow: hidden;
+}
+.testi-section::before {
+  content: ''; position: absolute; left: 50%; top: 0;
+  transform: translateX(-50%);
+  width: 900px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.25), transparent);
+}
+.testi-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-top: 48px;
+}
+.testi-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 28px 24px;
+  position: relative;
+  transition: border-color .25s, background .25s;
+}
+.testi-card:hover {
+  border-color: rgba(212,168,67,0.22);
+  background: rgba(255,255,255,0.06);
+}
+.testi-stars {
+  display: flex; gap: 3px; margin-bottom: 16px;
+}
+.testi-stars span { color: var(--gold); font-size: 14px; }
+.testi-text {
+  font-size: 14.5px; color: rgba(255,255,255,0.72);
+  line-height: 1.9; margin-bottom: 20px;
+  font-style: italic;
+}
+.testi-text::before { content: '\201C'; color: var(--gold); font-size: 20px; line-height: 0; vertical-align: -4px; }
+.testi-text::after  { content: '\201D'; color: var(--gold); font-size: 20px; line-height: 0; vertical-align: -4px; }
+.testi-author {
+  display: flex; align-items: center; gap: 12px;
+}
+.testi-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--red-deep), var(--ink-3));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.testi-name { font-size: 13px; color: rgba(255,255,255,0.6); font-weight: 600; }
+.testi-meta { font-size: 11.5px; color: rgba(255,255,255,0.35); margin-top: 2px; letter-spacing: 0.02em; }
+.testi-badge {
+  position: absolute; top: 20px; right: 20px;
+  font-size: 10px; letter-spacing: 0.12em; color: var(--gold-dark);
+  background: rgba(212,168,67,0.10); border: 1px solid rgba(212,168,67,0.22);
+  padding: 3px 9px; border-radius: 10px;
+}
+@media (max-width: 820px) {
+  .testi-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================================================
+   EARLY BIRD PRICING
+   =================================================== */
+.pricing-section {
+  background: #fff;
+  padding: 100px 0 90px;
+  border-top: 1px solid #ebebf4;
+}
+.pricing-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin-top: 48px; max-width: 760px;
+}
+.pricing-card {
+  border: 2px solid #e0e0ee; border-radius: 12px;
+  padding: 32px 28px; position: relative;
+  transition: border-color .25s, box-shadow .25s;
+}
+.pricing-card.featured {
+  border-color: var(--red);
+  box-shadow: 0 8px 32px rgba(196,30,58,0.12);
+}
+.pricing-badge-top {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--red); color: #fff;
+  font-size: 11px; letter-spacing: 0.12em; font-weight: 700;
+  padding: 4px 16px; border-radius: 20px; white-space: nowrap;
+}
+.pricing-tier { font-size: 12px; letter-spacing: 0.14em; color: #9999aa; text-transform: uppercase; margin-bottom: 12px; }
+.pricing-price {
+  font-size: 36px; font-weight: 900; color: #1a1a2e;
+  line-height: 1; margin-bottom: 6px;
+}
+.pricing-price sub { font-size: 14px; font-weight: 400; color: #9999aa; }
+.pricing-price sup { font-size: 18px; }
+.pricing-price.strike {
+  font-size: 22px; color: #c0c0cc; text-decoration: line-through; margin-bottom: 4px;
+}
+.pricing-period { font-size: 13px; color: #9999aa; margin-bottom: 24px; }
+.pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.pricing-features li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: #4a4a60; line-height: 1.6;
+}
+.pricing-features li::before {
+  content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+.pricing-features li.muted { color: #b0b0c0; }
+.pricing-features li.muted::before { color: #d0d0dc; }
+.pricing-cta-btn {
+  display: block; width: 100%; text-align: center;
+  padding: 14px; border-radius: 6px; font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: background .2s, transform .15s;
+  letter-spacing: 0.03em;
+}
+.pricing-cta-btn.primary {
+  background: var(--red); color: #fff;
+  box-shadow: 0 6px 20px rgba(196,30,58,0.28);
+}
+.pricing-cta-btn.primary:hover { background: var(--red-dark); transform: translateY(-2px); }
+.pricing-cta-btn.secondary {
+  background: #f4f4f8; color: #6a6a80;
+}
+.pricing-note { font-size: 12px; color: #b0b0c0; margin-top: 22px; text-align: center; }
+@media (max-width: 640px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+    /* ===================================================
+       FAN / CROWD
+       =================================================== */
+    .fan-section {
+      background: linear-gradient(180deg, #fff, var(--paper-2));
+      padding: 100px 0 0; text-align: center;
+    }
+    .crowd-wrap { width: 100%; margin-top: 44px; overflow: hidden; line-height: 0; }
+
+    /* ===================================================
+       ECHO (deep emotional)
+       =================================================== */
+    .echo-section {
+      background: #ffffff;
+      padding: 110px 0 90px;
+      position: relative; overflow: hidden;
+    }
+    .echo-section::before {
+      content: ''; position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 820px; height: 820px;
+      background: radial-gradient(circle, rgba(212,168,67,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .echo-section .container { position: relative; }
+    .echo-h2 {
+      font-size: clamp(26px, 3.4vw, 42px);
+      font-weight: 700; line-height: 1.55;
+      color: #0a0a1e; margin: 14px 0 0;
+      letter-spacing: 0.01em;
+    }
+    .echo-h2 em { color: var(--red); font-style: normal; }
+    .echo-body {
+      margin-top: 40px;
+      max-width: 640px;
+    }
+    .echo-line {
+      font-family: 'Cormorant Garamond', 'Noto Sans JP', serif;
+      font-style: italic;
+      font-size: clamp(18px, 2vw, 24px);
+      color: #2a2a40;
+      line-height: 2.1;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .echo-line.muted { color: #6a6a80; }
+    .echo-pause { height: 18px; }
+    .echo-close {
+      margin-top: 44px;
+      max-width: 600px;
+      font-size: 15.5px;
+      color: #4a4a60;
+      line-height: 2;
+      padding: 24px 28px;
+      border-left: 3px solid var(--gold);
+      background: linear-gradient(90deg, rgba(212,168,67,0.06), transparent);
+      border-radius: 0 6px 6px 0;
+    }
+    .echo-close strong {
+      color: var(--gold-deep); font-weight: 700;
+    }
+    @media (max-width: 640px) {
+      .echo-line { line-height: 1.95; }
+      .echo-close { padding: 20px 22px; }
+    }
+
+    /* ===================================================
+       QUOTE
+       =================================================== */
+    .quote-section { background: var(--paper-2); padding: 84px 0; position: relative; }
+    .quote-card {
+      max-width: 720px; margin: 0 auto;
+      position: relative;
+      padding: 8px 0 8px 40px;
+      border-left: 5px solid var(--red);
+    }
+    .quote-mark {
+      position: absolute; left: -2px; top: -22px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 90px; line-height: 1;
+      color: rgba(196,30,58,0.16);
+      pointer-events: none;
+    }
+    .quote-text {
+      font-size: 17.5px; color: #1a1a2e; line-height: 2.1;
+      font-weight: 500; margin-bottom: 22px;
+    }
+    .quote-attr {
+      font-size: 13px; color: #9999aa; letter-spacing: 0.04em;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .quote-attr::before {
+      content: ''; width: 28px; height: 1px; background: #c4c4d4;
+    }
+
+    /* Founder facts */
+    .founder-facts {
+      margin-top: 32px; padding-top: 28px;
+      border-top: 1px solid rgba(196,30,58,0.12);
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .founder-fact-item {
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .founder-fact-icon {
+      font-size: 20px; flex-shrink: 0; line-height: 1.4;
+    }
+    .founder-fact-label {
+      font-size: 12px; font-weight: 700; color: var(--red);
+      letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 2px;
+    }
+    .founder-fact-value {
+      font-size: 14px; color: #5a5a72; line-height: 1.7;
+    }
+
+    /* ===================================================
+       CTA
+       =================================================== */
+    .cta-section {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(196,30,58,0.05) 0%, transparent 70%),
+        #ffffff;
+      padding: 110px 0 100px;
+      text-align: center;
+      border-top: 1px solid rgba(196,30,58,0.10);
+      position: relative; overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(212,168,67,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-h2 {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 900; line-height: 1.45;
+      color: #0a0a1e; margin-bottom: 20px; letter-spacing: 0.01em;
+    }
+    .cta-h2 em { color: var(--red); font-style: normal; }
+    .cta-sub {
+      font-size: 16px; color: #6a6a80; line-height: 2;
+      margin-bottom: 44px; max-width: 560px; margin-left: auto; margin-right: auto;
+    }
+    .btn-cta-big {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: linear-gradient(135deg, var(--red), var(--red-dark));
+      color: #fff; padding: 22px 56px; border-radius: 4px;
+      font-size: 18px; font-weight: 800; letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 14px 40px rgba(196,30,58,0.35);
+      transition: transform .2s, box-shadow .2s;
+      position: relative; overflow: hidden;
+      animation: ctaPulse 2.6s ease-in-out infinite;
+    }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 14px 40px rgba(196,30,58,0.35); }
+      50% { box-shadow: 0 18px 56px rgba(196,30,58,0.55); }
+    }
+    .btn-cta-big::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+      transform: translateX(-100%); transition: transform .8s ease;
+    }
+    .btn-cta-big:hover { transform: translateY(-3px); }
+    .btn-cta-big:hover::before { transform: translateX(100%); }
+    .cta-note {
+      font-size: 12.5px; color: #b8b8c8; margin-top: 22px;
+      letter-spacing: 0.02em;
+    }
+    /* Countdown */
+    .countdown-strip {
+      display: flex; justify-content: center; gap: 20px;
+      margin: 24px 0 28px;
+      flex-wrap: wrap;
+    }
+    .cd-box {
+      display: flex; flex-direction: column; align-items: center;
+      min-width: 68px;
+    }
+    .cd-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 44px; line-height: 1;
+      color: #fff;
+      letter-spacing: .04em;
+    }
+    .cd-label {
+      font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.38); margin-top: 4px;
+    }
+    .cd-sep {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 40px; color: var(--red);
+      align-self: flex-start; padding-top: 4px;
+      line-height: 1;
+    }
+    .cd-title {
+      font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold-dark); margin-bottom: 10px; text-align: center;
+    }
+    .cta-form { max-width: 520px; margin: 0 auto; }
+.cta-form-wrestler { margin-bottom: 10px; }
+.cta-wrestler-select {
+  width: 100%; padding: 14px 18px; border-radius: 4px;
+  border: 1.5px solid rgba(196,30,58,0.2);
+  font-size: 14px; font-family: inherit; color: #5a5a72;
+  background: #fff; outline: none; cursor: pointer;
+  transition: border-color .2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%23b0b0c0' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+.cta-wrestler-select:focus { border-color: var(--red); }
+.cta-wrestler-select option { color: #1a1a2e; }
+    .cta-form-row {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+    }
+    .cta-email-input {
+      flex: 1; min-width: 220px;
+      padding: 20px 22px; border-radius: 4px;
+      border: 1.5px solid rgba(196,30,58,0.25);
+      font-size: 15px; font-family: inherit; color: #1a1a2e;
+      background: #fff; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .cta-email-input:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(196,30,58,0.12);
+    }
+    .cta-email-input::placeholder { color: #b0b0c0; }
+    .cta-form-note { font-size: 12px; color: #b0b0c0; margin-top: 14px; letter-spacing: 0.02em; }
+    .cta-form-success {
+      background: rgba(22,160,70,0.06); border: 1px solid rgba(22,160,70,0.22);
+      border-radius: 10px; padding: 22px 24px; margin-top: 18px;
+    }
+    .form-success-inner { display: flex; flex-direction: column; gap: 16px; align-items: center; }
+    .form-success-msg {
+      display: flex; align-items: center; gap: 12px;
+      color: #148048; font-size: 14.5px; font-weight: 600; text-align: left;
+    }
+    .share-btns { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+    .btn-share-x {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #000; color: #fff;
+      padding: 10px 22px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-share-x:hover { background: #222; transform: translateY(-1px); }
+    .btn-share-line {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #06c755; color: #fff;
+      padding: 10px 22px; border-radius: 20px;
+      font-size: 13px; font-weight: 600; text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .btn-share-line:hover { background: #05b34c; transform: translateY(-1px); }
+    @media (max-width: 540px) {
+      .cta-form-row { flex-direction: column; }
+      .cta-email-input { min-width: unset; width: 100%; }
+    }
+    .cta-trust {
+      margin-top: 56px; display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+    }
+    .trust-item {
+      font-size: 12.5px; color: #888899;
+      display: flex; align-items: center; gap: 8px;
+      letter-spacing: 0.02em;
+    }
+    .trust-item svg { width: 14px; height: 14px; color: var(--red); flex-shrink: 0; }
+
+    /* ===================================================
+       FOOTER
+       =================================================== */
+    footer {
+      background: var(--ink);
+      padding: 36px 32px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 18px;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      color: var(--gold); font-size: 22px; letter-spacing: 0.08em;
+    }
+    .footer-powered {
+      color: rgba(255,255,255,0.28); font-size: 11px;
+      margin-top: 4px; letter-spacing: 0.04em;
+    }
+    .footer-links { display: flex; gap: 26px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.36); font-size: 12px;
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { color: rgba(255,255,255,0.22); font-size: 11px; }
+
+    /* ===================================================
+       FOR ORGANIZATIONS
+       =================================================== */
+    .org-section {
+      background: linear-gradient(180deg, var(--paper-2) 0%, #fff 100%);
+      padding: 100px 0 90px;
+      border-top: 1px solid rgba(212,168,67,0.12);
+    }
+    .org-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      margin-top: 48px;
+    }
+    .org-card {
+      background: #fff; border: 1px solid #e8e8f0;
+      border-radius: 8px; padding: 28px 24px;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .org-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); transform: translateY(-3px); }
+    .org-card-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(196,30,58,0.08);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; color: var(--red);
+    }
+    .org-card-icon.gold { background: rgba(212,168,67,0.10); color: var(--gold-dark); }
+    .org-card-icon svg { width: 22px; height: 22px; }
+    .org-card-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+    .org-card-body { font-size: 14px; color: #6a6a80; line-height: 1.9; }
+    .org-cta { margin-top: 52px; text-align: center; }
+    .org-cta-text { font-size: 15px; color: #5a5a72; margin-bottom: 22px; }
+    .btn-org {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #1a1a2e; color: #fff;
+      padding: 16px 36px; border-radius: 4px;
+      font-size: 15px; font-weight: 700; letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      box-shadow: 0 6px 24px rgba(26,26,46,0.22);
+    }
+    .btn-org:hover { background: #2e2e4e; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(26,26,46,0.32); }
+    .org-cta-note { font-size: 12px; color: #b0b0c0; margin-top: 16px; letter-spacing: 0.02em; }
+    @media (max-width: 760px) {
+      .org-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ===================================================
+       ROADMAP / TIMELINE
+       =================================================== */
+    .roadmap-section {
+      background: #06060e;
+      padding: 100px 0 90px;
+      border-top: 1px solid rgba(212,168,67,.08);
+    }
+    .roadmap-section .section-h2 { color: #fff; }
+    .roadmap-section .section-h2 em { color: var(--gold); }
+    .roadmap-section .section-body { color: rgba(255,255,255,.55); }
+    .roadmap-timeline {
+      position: relative;
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .roadmap-timeline::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red) 0%, var(--gold) 100%);
+      opacity: .4;
+    }
+    .rm-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+    }
+    .rm-dot {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.15);
+      background: #111128;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; z-index: 1;
+      margin-bottom: 20px;
+      transition: border-color .3s;
+    }
+    .rm-dot svg { width: 22px; height: 22px; }
+    .rm-step.active .rm-dot {
+      border-color: var(--red);
+      background: rgba(196,30,58,.15);
+      color: #f87a8e;
+      box-shadow: 0 0 20px rgba(196,30,58,.3);
+    }
+    .rm-step.done .rm-dot {
+      border-color: var(--gold);
+      background: rgba(212,168,67,.12);
+      color: var(--gold);
+    }
+    .rm-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .rm-step.done .rm-badge { background: rgba(212,168,67,.15); color: var(--gold); }
+    .rm-step.active .rm-badge { background: rgba(196,30,58,.2); color: #f87a8e; }
+    .rm-step.upcoming .rm-badge { background: rgba(255,255,255,.08); color: rgba(255,255,255,.4); }
+    .rm-period { font-size: 13px; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 6px; letter-spacing: .02em; }
+    .rm-desc { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.7; }
+    @media (max-width: 760px) {
+      .roadmap-timeline {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .roadmap-timeline::before { display: none; }
+      .rm-step {
+        flex-direction: row;
+        text-align: left;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+        align-items: flex-start;
+        gap: 20px;
+      }
+      .rm-dot { flex-shrink: 0; margin-bottom: 0; }
+      .rm-content { flex: 1; }
+    }
+
+    /* ===================================================
+       FAQ
+       =================================================== */
+    .faq-section {
+      background: #fff;
+      padding: 100px 0 90px;
+      border-top: 1px solid rgba(196,30,58,0.08);
+    }
+    .faq-list { margin-top: 48px; max-width: 720px; }
+    .faq-item {
+      border-bottom: 1px solid #e8e8f0;
+    }
+    .faq-item:first-child { border-top: 1px solid #e8e8f0; }
+    .faq-q {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 4px; gap: 16px;
+      font-size: 16px; font-weight: 600; color: #1a1a2e;
+      font-family: inherit; text-align: left; line-height: 1.5;
+      transition: color .2s;
+    }
+    .faq-q:hover { color: var(--red); }
+    .faq-q[aria-expanded="true"] { color: var(--red); }
+    .faq-arrow {
+      flex-shrink: 0; color: currentColor;
+      transition: transform .3s ease;
+    }
+    .faq-q[aria-expanded="true"] .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0 4px;
+    }
+    .faq-a.open {
+      max-height: 300px;
+      padding: 0 4px 22px;
+    }
+    .faq-a p {
+      font-size: 15px; color: #5a5a72; line-height: 1.95;
+    }
+
+    /* ===================================================
+       HERO PROGRESS BAR (500名限定)
+       =================================================== */
+    .hero-progress-wrap {
+      max-width: 520px; margin: 0 auto 0;
+      background: rgba(196,30,58,0.10);
+      border: 1px solid rgba(196,30,58,0.30);
+      border-radius: 10px; padding: 14px 18px 12px;
+      backdrop-filter: blur(6px);
+    }
+    .hero-progress-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 8px; gap: 8px; flex-wrap: wrap;
+    }
+    .hero-progress-label {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      color: #f9c0ca;
+    }
+    .hero-progress-count {
+      font-size: 12px; color: rgba(255,255,255,0.65);
+    }
+    .hero-progress-count strong { color: #fff; }
+    .hero-progress-bar-bg {
+      background: rgba(255,255,255,0.10); border-radius: 4px;
+      height: 6px; overflow: hidden;
+    }
+    .hero-progress-bar-fill {
+      height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, var(--red), #f87a8e);
+      transition: width 1.2s ease;
+    }
+    .hero-progress-note {
+      font-size: 11px; color: rgba(255,255,255,0.45);
+      margin-top: 7px; text-align: center; letter-spacing: 0.03em;
+    }
+    .hero-progress-note strong { color: #f9c0ca; }
+
+    /* ===================================================
+       HERO URGENCY
+       =================================================== */
+    .hero-top-badges {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .hero-urgency {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(196,30,58,0.15);
+      border: 1px solid rgba(196,30,58,0.4);
+      color: #f9c0ca;
+      font-size: 11px; letter-spacing: 0.18em;
+      padding: 6px 14px; border-radius: 20px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+    .hero-patent-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(212,168,67,0.12);
+      border: 1px solid rgba(212,168,67,0.4);
+      color: var(--gold);
+      font-size: 11px; letter-spacing: 0.10em;
+      padding: 6px 14px; border-radius: 20px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ===================================================
+   ANNOUNCEMENT BAR
+   =================================================== */
+.announcement-bar {
+  position: relative; z-index: 200;
+  background: linear-gradient(90deg, var(--red-deep), var(--red), var(--red-deep));
+  color: #fff; padding: 10px 20px; text-align: center;
+}
+.ann-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-size: 12.5px; letter-spacing: 0.05em; font-weight: 500;
+}
+.ann-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #fff;
+  box-shadow: 0 0 8px rgba(255,255,255,0.8);
+  animation: pulseDot 1.6s ease-in-out infinite; flex-shrink: 0;
+}
+.ann-close {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: rgba(255,255,255,0.7);
+  cursor: pointer; font-size: 16px; padding: 4px 8px; line-height: 1;
+  transition: color .2s;
+}
+.ann-close:hover { color: #fff; }
+.announcement-bar.hidden { display: none; }
+
+/* ===================================================
+   READING PROGRESS BAR
+   =================================================== */
+.progress-bar {
+  position: fixed; top: 0; left: 0; z-index: 300;
+  height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  transition: width .1s linear;
+  pointer-events: none;
+}
+
+    /* ===================================================
+   STICKY MOBILE CTA
+   =================================================== */
+.sticky-cta-mobile {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 150;
+  padding: 12px 16px 16px; /* bottom padding for safe area */
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, transparent 0%, rgba(6,6,14,0.96) 30%);
+  pointer-events: none;
+}
+.sticky-cta-mobile.visible { pointer-events: auto; }
+.sticky-cta-link {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff; padding: 16px 24px; border-radius: 8px;
+  font-size: 15px; font-weight: 800; letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(196,30,58,0.45);
+  animation: ctaPulse 2.6s ease-in-out infinite;
+}
+/* デスクトップ用スティッキーCTA（右下固定） */
+.sticky-cta-desktop {
+  display: none;
+  position: fixed; bottom: 32px; right: 32px; z-index: 150;
+  pointer-events: none;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity .3s, transform .3s;
+}
+.sticky-cta-desktop.visible {
+  pointer-events: auto; opacity: 1; transform: translateY(0);
+}
+.sticky-cta-desktop a {
+  display: flex; align-items: center; gap: 9px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff; padding: 14px 22px; border-radius: 50px;
+  font-size: 14px; font-weight: 800; letter-spacing: 0.04em;
+  text-decoration: none; white-space: nowrap;
+  box-shadow: 0 8px 28px rgba(196,30,58,0.50);
+  animation: ctaPulse 2.6s ease-in-out infinite;
+}
+@media (min-width: 821px) {
+  .sticky-cta-desktop { display: block; }
+}
+@media (max-width: 820px) {
+  .sticky-cta-mobile { display: block; }
+}
+
+/* ===================================================
+   EXIT INTENT POPUP
+   =================================================== */
+.exit-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(6,6,14,0.78); backdrop-filter: blur(6px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.exit-overlay.active { display: flex; }
+.exit-popup {
+  background: #fff; border-radius: 14px;
+  max-width: 480px; width: 100%; padding: 44px 40px 36px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+  animation: slideUp .3s ease;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+.exit-close-btn {
+  position: absolute; top: 16px; right: 18px;
+  background: none; border: none; cursor: pointer;
+  color: #b0b0c0; font-size: 22px; line-height: 1; padding: 4px;
+  transition: color .2s;
+}
+.exit-close-btn:hover { color: #6a6a80; }
+.exit-popup-eyebrow {
+  font-size: 11px; letter-spacing: 0.18em; color: var(--red);
+  font-weight: 700; margin-bottom: 14px; text-transform: uppercase;
+}
+.exit-popup-h { font-size: 22px; font-weight: 900; color: #1a1a2e; line-height: 1.4; margin-bottom: 12px; }
+.exit-popup-h em { color: var(--red); font-style: normal; }
+.exit-popup-body { font-size: 14px; color: #6a6a80; line-height: 1.9; margin-bottom: 24px; }
+.exit-form { display: flex; gap: 8px; }
+.exit-email-input {
+  flex: 1; padding: 14px 16px; border-radius: 4px;
+  border: 1.5px solid rgba(196,30,58,0.22);
+  font-size: 14px; font-family: inherit; outline: none;
+  transition: border-color .2s;
+}
+.exit-email-input:focus { border-color: var(--red); }
+.exit-submit-btn {
+  background: var(--red); color: #fff;
+  padding: 14px 20px; border-radius: 4px; border: none; cursor: pointer;
+  font-size: 14px; font-weight: 700; font-family: inherit;
+  white-space: nowrap;
+  transition: background .2s, transform .15s;
+}
+.exit-submit-btn:hover { background: var(--red-dark); transform: translateY(-1px); }
+.exit-skip { text-align: center; margin-top: 14px; }
+.exit-skip a { font-size: 12px; color: #b0b0c0; cursor: pointer; text-decoration: underline; }
+.exit-skip a:hover { color: #6a6a80; }
+@media (max-width: 480px) {
+  .exit-popup { padding: 36px 24px 28px; }
+  .exit-form { flex-direction: column; }
+}
+
+    /* ---------- Reduce motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+      .hero-bg { animation: none; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* ---------- High contrast / forced colors ---------- */
+    @media (forced-colors: active) {
+      .btn-primary, .btn-cta-big, .nav-cta { border: 2px solid ButtonText; }
+    }
+
+    /* ---------- Print ---------- */
+    @media print {
+      .progress-bar, #nav, .announcement-bar, .sticky-cta-mobile,
+      .exit-overlay, .scroll-cue, .hero-btns .btn-ghost,
+      .cta-form, .org-cta, .hero-stats,
+      .footer-links { display: none !important; }
+      body { background: #fff; color: #000; }
+      .hero { min-height: auto; background: #fff; color: #000; padding: 40px 0 20px; }
+      .hero-headline, .hero-sub, .hero-eyebrow, .hero-script { color: #000 !important; }
+      .hero-headline em { color: #c41e3a !important; }
+      .hero-bg, .hero-overlay, .hero-noise, .hero-vignette, .hero-spot { display: none; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      section { page-break-inside: avoid; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 10px; color: #666; }
+      a[href^="#"]::after, a[href^="mailto"]::after { content: ""; }
+      .footer-inner { border-top: 1px solid #ccc; padding-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">コンテンツへスキップ</a>
+
+  <!-- ========= PROGRESS BAR ========= -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ========= ANNOUNCEMENT BAR ========= -->
+  <div id="announcementBar" class="announcement-bar">
+    <div class="ann-inner">
+      <span class="ann-dot"></span>
+      <span>2026年 正式リリース予定 &nbsp;·&nbsp; 早期登録受付中 &nbsp;·&nbsp; 先着500名限定 — 残り<strong id="annSlots">???</strong>名</span>
+    </div>
+    <button class="ann-close" id="annClose" aria-label="閉じる">✕</button>
+  </div>
+
+  <!-- ========= NAV ========= -->
+  <nav id="nav" aria-label="メインナビゲーション">
+    <div class="nav-inner">
+      <div class="nav-logo-wrap">
+        <a href="#main-content" class="nav-logo" aria-label="CheerRING トップへ">CheerRING</a>
+        <div class="nav-tag">powered by CheerLink</div>
+      </div>
+      <div class="nav-links">
+        <a href="#problem">課題</a>
+        <a href="#solution">解決策</a>
+        <a href="#benefits">特典</a>
+        <a href="#roadmap">ロードマップ</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cta">参加する</a>
+      </div>
+      <a href="#cta" class="nav-cta">会員証を受け取る →</a>
+      <button class="nav-burger" id="navBurger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+  <!-- ========= HERO ========= -->
+  <section class="hero" aria-label="ヒーロー">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-spot"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+      <div class="hero-top-badges reveal">
+        <div class="hero-urgency">🔴 早期アクセス登録 受付中</div>
+        <div class="hero-patent-badge">🏅 特許第7825912号 取得済み</div>
+      </div>
+      <div class="hero-eyebrow reveal">PRO WRESTLING — FAN MEMBERSHIP</div>
+      <div class="hero-script reveal delay-1">倒れた姿へ叫んだ声援<span class="dot"></span>立ち上がる姿に力をもらった</div>
+      <h1 class="hero-headline reveal delay-2">
+        この感動を、<br>
+        <em>永遠に。</em>
+      </h1>
+      <p class="hero-sub reveal delay-3">
+        CheerRINGは、プロレスを愛するファンのためのデジタル会員証。<br>
+        <strong>応援してきた時間を、あなたの証に。その参加を、選手のこれからへ。</strong>
+      </p>
+      <div class="hero-btns reveal delay-4">
+        <a href="#cta" class="btn-primary">
+          会員証を受け取る
+          <span class="arrow">→</span>
+        </a>
+        <a href="#solution" class="btn-ghost">CheerRINGとは</a>
+      </div>
+    </div>
+
+    <!-- 500名限定 進捗バー -->
+    <div class="hero-progress-wrap reveal delay-5">
+      <div class="hero-progress-header">
+        <span class="hero-progress-label">🔥 先着500名限定 早期登録枠</span>
+        <span class="hero-progress-count"><strong id="regCount">312</strong> / 500名 登録済み</span>
+      </div>
+      <div class="hero-progress-bar-bg">
+        <div class="hero-progress-bar-fill" style="width: 62.4%;"></div>
+      </div>
+      <p class="hero-progress-note">残り <strong>188名</strong> — 登録は無料です</p>
+    </div>
+
+    <div class="hero-stats reveal delay-5" style="margin-top:32px;">
+      <div class="stat-item">
+        <div class="stat-num" data-count="37">0<span>歳</span></div>
+        <div class="stat-label">プロレスラー平均引退年齢</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="15">0<span>年</span></div>
+        <div class="stat-label">平均現役期間</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="148">0<span>試合</span></div>
+        <div class="stat-label">業界年間平均興行数</div>
+      </div>
+    </div>
+
+    <div class="scroll-cue">
+      <div>SCROLL</div>
+      <div class="line"></div>
+    </div>
+  </section>
+
+  <!-- ========= PROBLEM (dark) ========= -->
+  <section id="problem" class="problem-section">
+    <div class="ring-rope top"></div>
+    <div class="ring-rope gold top" style="top:18px;"></div>
+    <div class="container">
+      <div class="eyebrow light reveal">THE PROBLEM</div>
+      <h2 class="section-h2 on-dark reveal delay-1">
+        リングの外で起きている、<br><em>静かな現実。</em>
+      </h2>
+      <p class="section-body on-dark reveal delay-2">
+        平均引退年齢は37歳。現役期間はわずか15年前後。<br>
+        怪我、遠征、収入の波——華やかな試合の裏側で、選手は別の時間を生きている。
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div class="prob-icon dark-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,14"/></svg>
+          </div>
+          <div class="prob-title">短い現役期間</div>
+          <div class="prob-body">平均引退37歳。多くの選手が経済的不安を抱えながら第二の人生を模索する。輝いている期間は、思ったより短い。</div>
+        </div>
+        <div class="problem-card reveal delay-1">
+          <div class="prob-icon dark-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l4-4 4 4 4-8 6 8"/><path d="M3 21h18"/></svg>
+          </div>
+          <div class="prob-title">不安定な収入</div>
+          <div class="prob-body">試合数・人気に収入が左右され、怪我による離脱が直接生活を直撃する。セーフティネットが圧倒的に不足している。</div>
+        </div>
+        <div class="problem-card reveal delay-2">
+          <div class="prob-icon dark-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+          </div>
+          <div class="prob-title">「その日だけ」で終わる応援</div>
+          <div class="prob-body">チケットや物販で完結する一回性の応援。試合のない日々の選手とファンを、静かに繋ぎ続ける仕組みは、これまで用意されてこなかった。</div>
+        </div>
+        <div class="problem-card reveal delay-3">
+          <div class="prob-icon dark-gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+          </div>
+          <div class="prob-title">引退で途切れる関係</div>
+          <div class="prob-body">引退とともに、長年応援してきた選手との接点が消えてしまう。セカンドキャリアの歩みを、ファンとして見届け続けられる場もまだ少ない。</div>
+        </div>
+      </div>
+    </div>
+    <div class="ring-rope gold bottom" style="bottom:18px;"></div>
+    <div class="ring-rope bottom"></div>
+  </section>
+
+  <!-- strip transition -->
+  <div class="sil-strip" style="background:#ffffff;">
+    <svg id="strip-p-s" viewBox="0 0 1100 96" style="width:100%; display:block;"></svg>
+  </div>
+
+  <!-- ========= SOLUTION (white) ========= -->
+  <section id="solution" class="white-section section-pad">
+    <div class="container">
+      <div class="eyebrow reveal">HOW IT WORKS</div>
+      <h2 class="section-h2 reveal delay-1">
+        「一瞬の熱狂」を、<br><em>「一生の伴走」に変える。</em>
+      </h2>
+      <p class="section-body reveal delay-2">
+        CheerRINGのデジタル会員証は、あなたが誰を、いつから、どのように応援してきたかを記録します。<br>
+        応援を続けるほど、会員証に物語が積み上がっていく。<br>
+        会員証から生まれる収益の一部は、選手のこれからへ届けられます。
+      </p>
+
+      <div class="solution-flow reveal delay-3">
+        <div class="flow-node">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="flow-title">ファン</div>
+          <div class="flow-desc">応援してきた時間が<br>記録に残る</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </div>
+        <div class="flow-node center-node">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <div class="flow-title accent">デジタル会員証</div>
+          <div class="flow-desc">応援の証・<br>ファンヒストリーの器</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        </div>
+        <div class="flow-node">
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="flow-title">選手・団体</div>
+          <div class="flow-desc">続いていく接点・<br>ファンとの関係</div>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar reveal">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="pillar-title">応援の記録</div>
+          <div class="pillar-body">いつ、どの選手を、どんなふうに応援してきたか。あなたのファンヒストリーが形に残っていく</div>
+        </div>
+        <div class="pillar reveal delay-1">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="pillar-title">ブロックチェーン保証</div>
+          <div class="pillar-body">ブロックチェーン技術によって応援履歴の改ざんを防ぐ設計。あなたの応援は、デジタル会員証の記録として残っていく</div>
+        </div>
+        <div class="pillar reveal delay-2">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="pillar-title">選手のこれからへ届く設計</div>
+          <div class="pillar-body">団体・選手・ファンが同じ仕組みの中で繋がる。あなたの参加が、選手の活動と次の挑戦を支える流れにもなっていく</div>
+        </div>
+      </div>
+
+      <div class="reveal delay-3">
+        <div class="patent-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          特許第7825912号取得済み — CheerLink デジタル会員証システム
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:#fff; border-top:1px solid #ebebf4; height:1px;"></div>
+
+  <!-- ========= BENEFITS (paper-2) ========= -->
+  <section id="benefits" class="benefits-section">
+    <div class="container">
+      <div class="eyebrow reveal">MEMBER BENEFITS</div>
+      <h2 class="section-h2 reveal delay-1">長く応援してきた人に、<br><em>ちゃんと届く特別感を。</em></h2>
+      <p class="section-body reveal delay-2">先行案内、限定メッセージ、応援バッジ、観戦記録。<br>応援を続けるほど、あなたの会員証に物語が残っていきます。</p>
+
+      <div class="benefit-list">
+        <div class="benefit-card reveal">
+          <div class="benefit-num">01</div>
+          <div class="benefit-content">
+            <div class="benefit-title">先行参戦権 — 限定席への優先案内</div>
+            <div class="benefit-desc">一般発売前に、会員だけの特別枠から席を案内。応援を続けてきた人のところに、まず席が届くように。</div>
+            <span class="benefit-tag">PRIORITY ACCESS</span>
+          </div>
+        </div>
+        <div class="benefit-card reveal delay-1">
+          <div class="benefit-num">02</div>
+          <div class="benefit-content">
+            <div class="benefit-title">タッグパートナーバッジ — 応援してきた時間のしるし</div>
+            <div class="benefit-desc">続けてきた応援の年月にあわせてバッジが少しずつ変わっていく。1年、3年、5年。あなたが応援してきた時間が、形になって会員証に残る。</div>
+            <span class="benefit-tag">GROWING BADGE</span>
+          </div>
+        </div>
+        <div class="benefit-card reveal delay-2">
+          <div class="benefit-num">03</div>
+          <div class="benefit-content">
+            <div class="benefit-title">バックステージボイス — 選手からの限定メッセージ</div>
+            <div class="benefit-desc">回復期、遠征中、試合のない日々——リングの外にいる選手の言葉が、会員だけにそっと届く。距離も時間も越えて、声が残っていく。</div>
+            <span class="benefit-tag">EXCLUSIVE VOICE</span>
+          </div>
+        </div>
+        <div class="benefit-card reveal delay-3">
+          <div class="benefit-num">04</div>
+          <div class="benefit-content">
+            <div class="benefit-title">セコンド記録 — あなたのファンヒストリー</div>
+            <div class="benefit-desc">いつ、どの試合を見て、どれくらい応援してきたか。会場で叫んだ声も、画面越しに見守った時間も、あなたのファンヒストリーとして残っていく。</div>
+            <span class="benefit-tag">FAN HISTORY</span>
+          </div>
+        </div>
+        <div class="benefit-card gold-accent reveal delay-4">
+          <div class="benefit-num">05</div>
+          <div class="benefit-content">
+            <div class="benefit-title">特別興行エントリー権 — 限定企画への案内</div>
+            <div class="benefit-desc">ファン感謝祭、選手サイン会、トークショー——会員だけが申し込める時間。応援を重ねるほど、参加できる場が少しずつ広がっていく。</div>
+            <span class="benefit-tag">SPECIAL INVITATION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOR WHOM ========= -->
+  <section class="forwhom-section" aria-label="こんな方へ">
+    <div class="container">
+      <div class="eyebrow reveal">FOR WHOM</div>
+      <h2 class="section-h2 reveal delay-1">こんな方のために、<br><em>作りました。</em></h2>
+      <p class="section-body reveal delay-2">
+        プロレスファンなら、きっとどこかに当てはまるはずです。
+      </p>
+
+      <div class="persona-grid">
+        <div class="persona-card reveal">
+          <div class="persona-top">
+            <div class="persona-avatar">T</div>
+            <div>
+              <div class="persona-name">田中 誠一（46歳）</div>
+              <div class="persona-meta">ファン歴22年 · 会社員 · 関東在住</div>
+            </div>
+          </div>
+          <p class="persona-quote">「同じ選手を20年応援し続けてきたのに、自分の応援がどこにも記録されていない。チケットの半券を集めてるけど、それだけじゃ足りない気がしてた。」</p>
+          <div class="persona-tags">
+            <span class="persona-tag">長年のファン</span>
+            <span class="persona-tag">会場派</span>
+            <span class="persona-tag">応援を残したい</span>
+          </div>
+        </div>
+
+        <div class="persona-card reveal delay-1">
+          <div class="persona-top">
+            <div class="persona-avatar gold">S</div>
+            <div>
+              <div class="persona-name">鈴木 あかね（29歳）</div>
+              <div class="persona-meta">ファン歴4年 · IT系 · 女子プロレス好き</div>
+            </div>
+          </div>
+          <p class="persona-quote">「SNSで応援してるつもりだけど、流れていくだけで積み重なっていかない。好きな選手に「ずっと見てきたよ」って言えるものが欲しかった。」</p>
+          <div class="persona-tags">
+            <span class="persona-tag">SNS発信派</span>
+            <span class="persona-tag">デジタル慣れ</span>
+            <span class="persona-tag">選手との距離を縮めたい</span>
+          </div>
+        </div>
+
+        <div class="persona-card reveal delay-2">
+          <div class="persona-top">
+            <div class="persona-avatar ink">M</div>
+            <div>
+              <div class="persona-name">松本 浩（55歳）</div>
+              <div class="persona-meta">ファン歴35年 · 地方在住 · 配信観戦メイン</div>
+            </div>
+          </div>
+          <p class="persona-quote">「地方で配信でしか観れないけど、熱量は会場の人たちと同じかそれ以上。応援してるのに「ファン」として数えてもらえない感覚がずっとあった。」</p>
+          <div class="persona-tags">
+            <span class="persona-tag">配信・遠方ファン</span>
+            <span class="persona-tag">ベテラン</span>
+            <span class="persona-tag">存在を認めてほしい</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CONCEPT VALIDATION ========= -->
+  <section class="testi-section">
+    <div class="container">
+      <div class="eyebrow light reveal" style="display:inline-flex;">CONCEPT VALIDATION</div>
+      <h2 class="section-h2 on-dark reveal delay-1">プロレスファンに<em>聞いてみた。</em></h2>
+      <p class="section-body on-dark reveal delay-2">
+        サービスローンチ前に、プロレスファン10名にコンセプトを見せてヒアリングしました。<br>
+        正直な反応をそのままお伝えします。
+      </p>
+
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <span class="testi-badge" style="background:rgba(212,168,67,.2);color:var(--gold);border:1px solid rgba(212,168,67,.3);">コンセプト検証</span>
+          <p class="testi-text" style="margin-top:12px;">「応援してきた記録が"証"として残る、というコンセプトは刺さりました。チケットの半券を大切にしてきた自分の気持ちと重なった。サービスが始まったら使いたい。」</p>
+          <div class="testi-author">
+            <div class="testi-avatar">K</div>
+            <div>
+              <div class="testi-name">K.S. さん</div>
+              <div class="testi-meta">ファン歴12年 · 40代 · 会場観戦派</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal delay-1">
+          <span class="testi-badge" style="background:rgba(212,168,67,.2);color:var(--gold);border:1px solid rgba(212,168,67,.3);">コンセプト検証</span>
+          <p class="testi-text" style="margin-top:12px;">「最初は難しい仕組みかと思いましたが、説明を聞いたら“応援の記録が残るデジタル会員証”なんですね。暗号資産が不要と分かって安心しました。SNSでの応援が流れていくのがずっと悩みだったので。」</p>
+          <div class="testi-author">
+            <div class="testi-avatar">M</div>
+            <div>
+              <div class="testi-name">M.T. さん</div>
+              <div class="testi-meta">ファン歴6年 · 30代 · SNS発信派</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal delay-2">
+          <span class="testi-badge" style="background:rgba(212,168,67,.2);color:var(--gold);border:1px solid rgba(212,168,67,.3);">コンセプト検証</span>
+          <p class="testi-text" style="margin-top:12px;">「引退後もファンとして関わり続けられる仕組みが欲しかった。推しが引退したとき、接点が全部消えてしまって寂しかったので、このコンセプトは本当に求めていたものだと思う。」</p>
+          <div class="testi-author">
+            <div class="testi-avatar">Y</div>
+            <div>
+              <div class="testi-name">Y.A. さん</div>
+              <div class="testi-meta">ファン歴20年以上 · 50代 · 配信観戦派</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-body on-dark reveal delay-3" style="margin-top:36px;font-size:13px;opacity:.55;text-align:center;">
+        ※ 上記は2026年4〜5月に実施したコンセプトヒアリング（n=10）からの抜粋です。<br>サービスはβ版に向けて開発中のため、実際の利用体験ではありません。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========= EARLY BIRD PRICING ========= -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="eyebrow reveal">EARLY BIRD</div>
+      <h2 class="section-h2 reveal delay-1">早期登録者だけの、<br><em>特別な条件。</em></h2>
+      <p class="section-body reveal delay-2">
+        正式リリース時の価格は、早期登録者へ優先的にご案内します。<br>今登録することで、最もお得な条件でスタートできます。
+      </p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card featured reveal delay-1">
+          <div class="pricing-badge-top">早期登録者限定</div>
+          <div class="pricing-tier">Early Bird</div>
+          <div class="pricing-price strike" style="font-size:15px;opacity:.5;text-decoration:line-through;">通常予定価格 月額 1,480円〜</div>
+          <div class="pricing-price"><sup style="font-size:14px;">月額</sup> <span style="font-size:42px;font-weight:900;letter-spacing:-.02em;">980円〜</span><sub style="font-size:12px;opacity:.7;">（早期登録者限定・想定価格）</sub></div>
+          <div class="pricing-period" style="margin-top:4px;">年払いオプションあり（2ヶ月分お得）</div>
+          <ul class="pricing-features">
+            <li>デジタル会員証（ファンヒストリー記録）</li>
+            <li>先行参戦権（限定席への優先案内）</li>
+            <li>タッグパートナーバッジ（応援年月に応じて変化）</li>
+            <li>バックステージボイス（選手限定メッセージ）</li>
+            <li>特別興行エントリー権</li>
+            <li>早期登録者限定 特別価格案内</li>
+          </ul>
+          <a href="#cta" class="pricing-cta-btn primary">今すぐ早期登録する →</a>
+        </div>
+
+        <div class="pricing-card reveal delay-2">
+          <div class="pricing-tier">Regular</div>
+          <div class="pricing-price"><sup style="font-size:14px;">月額</sup> <span style="font-size:42px;font-weight:900;letter-spacing:-.02em;">1,480円〜</span></div>
+          <div class="pricing-period">正式リリース後の一般価格（予定）</div>
+          <ul class="pricing-features">
+            <li>デジタル会員証（ファンヒストリー記録）</li>
+            <li>先行参戦権（限定席への優先案内）</li>
+            <li>タッグパートナーバッジ</li>
+            <li>バックステージボイス</li>
+            <li>特別興行エントリー権</li>
+            <li class="muted">早期登録者限定特典なし</li>
+          </ul>
+          <a href="#cta" class="pricing-cta-btn secondary">早期登録して特典を受け取る</a>
+        </div>
+      </div>
+      <p class="pricing-note reveal delay-3">※ 表示価格はサービス設計上の想定価格です。正式価格は正式リリース前に早期登録者へ優先案内します。価格・内容は変更になる場合があります。</p>
+    </div>
+  </section>
+
+  <!-- ========= FAN / CROWD ========= -->
+  <section class="fan-section">
+    <div class="container">
+      <div class="eyebrow gold reveal" style="justify-content:center;display:inline-flex;">YOUR PLACE IN THE RING</div>
+      <h2 class="section-h2 reveal delay-1" style="text-align:center;">あなたも、<em>このリングの中にいる。</em></h2>
+      <p class="section-body reveal delay-2" style="text-align:center; margin-left:auto; margin-right:auto;">
+        リングの上の戦いも、最前列の声援も、画面越しに見守ってきた時間も。<br>
+        その全てが、プロレスというリングをつくってきた。
+      </p>
+    </div>
+    <div class="crowd-wrap">
+      <svg id="crowd-main" viewBox="0 0 1100 240" style="width:100%; display:block;"></svg>
+    </div>
+  </section>
+
+  <!-- ========= ECHO (deep emotional) ========= -->
+  <section class="echo-section">
+    <div class="container">
+      <div class="eyebrow gold reveal" style="display:inline-flex;">WHAT YOU'VE RECEIVED</div>
+      <h2 class="echo-h2 reveal delay-1">あの姿に、<em>何度も力をもらってきた。</em></h2>
+      <div class="echo-body">
+        <p class="echo-line reveal delay-2">勝つ姿に、憧れた。</p>
+        <p class="echo-line reveal delay-3">倒れても立ち上がる姿に、自分を重ねた。</p>
+        <div class="echo-pause"></div>
+        <p class="echo-line muted reveal delay-4">会場で叫んだ声も、画面越しに見守った時間も、</p>
+        <p class="echo-line muted reveal delay-5">きっと、自分自身を支える力になっていた。</p>
+      </div>
+      <p class="echo-close reveal delay-5">
+        CheerRINGは、その<strong>感動と感謝</strong>を、<br>
+        あなたの応援の証として残し、<strong>選手のこれから</strong>へ届けていくための会員証です。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========= FAQ ========= -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="eyebrow reveal">FAQ</div>
+      <h2 class="section-h2 reveal delay-1">よくある質問</h2>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">
+            <span>デジタル会員証とは何ですか？難しくないですか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>デジタル会員証は、ブロックチェーン技術で証明された応援の記録です。スマートフォンとメールアドレスがあれば利用でき、専門知識や暗号資産（仮想通貨）の購入は不要です。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-1">
+          <button class="faq-q" aria-expanded="false">
+            <span>費用はどれくらいかかりますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>早期アクセス登録は完全無料です。正式サービス開始時の料金体系については、登録いただいたメールアドレスへ優先的にご案内します。早期登録者には特別価格でのご案内を予定しています。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-2">
+          <button class="faq-q" aria-expanded="false">
+            <span>スマートフォンだけで使えますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>はい、スマートフォンのブラウザからご利用いただけます。専用アプリのインストールも不要です。iOS・Androidどちらにも対応しています。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-3">
+          <button class="faq-q" aria-expanded="false">
+            <span>応援している選手・団体が参加していない場合はどうなりますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>早期登録時に「応援している選手・団体」を教えていただくことができます。ご要望の多い選手・団体から順次参加交渉を進めます。皆さんの声が、参加団体を増やす力になります。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-4">
+          <button class="faq-q" aria-expanded="false">
+            <span>投機や暗号資産投資とは違うのですか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>CheerRINGの会員証は、投機・投資を目的とした商品ではありません。「応援の証」と「選手との継続的なつながり」を目的としたファン会員証です。値上がりを期待したり、転売で利益を得ることを推奨するものではありません。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-5">
+          <button class="faq-q" aria-expanded="false">
+            <span>個人情報はどう扱われますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>早期登録時に収集するのはメールアドレスのみです（選手・団体名は任意入力）。第三者への販売・提供は一切行いません。正式リリース案内の送付のみに使用し、いつでも配信停止・削除請求が可能です。詳細はプライバシーポリシーをご確認ください。</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal delay-5">
+          <button class="faq-q" aria-expanded="false">
+            <span>引退した選手や、過去に応援していた選手も対象になりますか？</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="6,9 12,15 18,9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>はい。CheerRINGは「現役選手だけ」のサービスではありません。引退後も選手との継続的なつながりを保てる設計をしています。セカンドキャリアを歩む選手が、長年応援してくれたファンと再び繋がる場として機能させたいと考えています。詳細は正式発表をお待ちください。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= ROADMAP ========= -->
+  <section id="roadmap" class="roadmap-section" aria-label="ロードマップ">
+    <div class="container">
+      <div class="eyebrow reveal" style="color:var(--gold-dark)">ROADMAP</div>
+      <h2 class="section-h2 reveal delay-1">いつ、何ができるようになるか。<br><em>正直にお伝えします。</em></h2>
+      <p class="section-body reveal delay-2">
+        CheerRINGはまだプレローンチです。でも、計画は明確です。<br>
+        今の早期登録が、最初のステップを動かします。
+      </p>
+
+      <div class="roadmap-timeline">
+        <div class="rm-step done reveal">
+          <div class="rm-dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div class="rm-content">
+            <div class="rm-badge">完了</div>
+            <div class="rm-period">2025年〜現在</div>
+            <div class="rm-desc">特許取得（第7825912号）・コアシステム開発・プロレス団体へのヒアリング</div>
+          </div>
+        </div>
+
+        <div class="rm-step active reveal delay-1">
+          <div class="rm-dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg>
+          </div>
+          <div class="rm-content">
+            <div class="rm-badge">進行中</div>
+            <div class="rm-period">2026年 春〜夏</div>
+            <div class="rm-desc">早期アクセス登録受付・パートナー団体との最終調整・β版開発</div>
+          </div>
+        </div>
+
+        <div class="rm-step upcoming reveal delay-2">
+          <div class="rm-dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="rm-content">
+            <div class="rm-badge">次のステップ</div>
+            <div class="rm-period">2026年 秋</div>
+            <div class="rm-desc">早期登録者限定クローズドβ開始・最初のデジタル会員証発行・フィードバック収集</div>
+          </div>
+        </div>
+
+        <div class="rm-step upcoming reveal delay-3">
+          <div class="rm-dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rm-content">
+            <div class="rm-badge">予定</div>
+            <div class="rm-period">2026年末〜2027年</div>
+            <div class="rm-desc">正式リリース・パートナー団体・選手の拡大・二次市場・特典コンテンツ開放</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal delay-4" style="text-align:center;margin-top:52px;">
+        <p style="font-size:.85rem;color:rgba(255,255,255,.3);letter-spacing:.06em;">早期登録者はクローズドβに優先招待されます。</p>
+        <a href="#cta" class="btn-primary" style="margin-top:20px;display:inline-flex;align-items:center;gap:8px;">今すぐ早期登録する <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOR ORGANIZATIONS ========= -->
+  <section id="for-org" class="org-section">
+    <div class="container">
+      <div class="eyebrow gold reveal">FOR ORGANIZATIONS</div>
+      <h2 class="section-h2 reveal delay-1">団体・プロモーターの方へ。<br><em>ファンとの関係を、次のステージへ。</em></h2>
+      <p class="section-body reveal delay-2">
+        CheerRINGは、ファンだけのサービスではありません。<br>
+        選手・団体にとっても「ファンとの継続的なつながり」と「新しい収益の仕組み」を生み出します。
+      </p>
+
+      <div class="org-grid">
+        <div class="org-card reveal">
+          <div class="org-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="org-card-title">ファンベースの可視化</div>
+          <div class="org-card-body">誰が、いつから、どのくらい応援してくれているかをデータで把握。熱量の高いコアファンへ直接届く接点を持てます。</div>
+        </div>
+        <div class="org-card reveal delay-1">
+          <div class="org-card-icon gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="org-card-title">継続的な収益の仕組み</div>
+          <div class="org-card-body">チケット・物販だけに依存しない、ファン会員証による定期的な収益ストリーム。試合のない日々も、応援は続きます。</div>
+        </div>
+        <div class="org-card reveal delay-2">
+          <div class="org-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="org-card-title">選手のセカンドキャリア支援</div>
+          <div class="org-card-body">引退後もファンとの接点が続く設計。現役中に積み上げたファンベースが、セカンドキャリアの資産になります。</div>
+        </div>
+      </div>
+
+      <div class="org-cta reveal delay-3">
+        <p class="org-cta-text">導入事例・詳細資料のご請求は、以下よりお気軽にご連絡ください。</p>
+        <a href="mailto:info@cheerlink.jp?subject=CheerRING導入検討" class="btn-org">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          資料請求・お問い合わせ
+        </a>
+        <p class="org-cta-note">特許第7825912号取得済み · 導入初期費用0円プランあり</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOUNDER ========= -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">
+          40年来のプロレスファンとして、多くの感動をもらってきた。同時に、多くの選手の怪我、離脱、引退、その後の苦闘も見てきた。応援を消費で終わらせてはいけない——それがこのサービスを作った理由です。
+        </p>
+        <div class="quote-attr">CheerRING プロレス事業開発 / 新保 学</div>
+
+        <div class="founder-facts reveal delay-2">
+          <div class="founder-fact-item">
+            <div class="founder-fact-icon">🏅</div>
+            <div>
+              <div class="founder-fact-label">特許取得</div>
+              <div class="founder-fact-value">第7825912号 — 応援履歴とデジタル会員証を組み合わせる関連特許として取得済みです。</div>
+            </div>
+          </div>
+          <div class="founder-fact-item">
+            <div class="founder-fact-icon">🤼</div>
+            <div>
+              <div class="founder-fact-label">プロレス歴</div>
+              <div class="founder-fact-value">観戦歴40年以上。現在も年間数十試合を観戦。ファンの感情を起点に設計しています。</div>
+            </div>
+          </div>
+          <div class="founder-fact-item">
+            <div class="founder-fact-icon">📋</div>
+            <div>
+              <div class="founder-fact-label">現在のフェーズ</div>
+              <div class="founder-fact-value">早期登録受付中 → 2026年秋クローズドβ開始予定。実績を正直に積み上げます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CTA ========= -->
+  <section id="cta" class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="container" style="position:relative;">
+      <div class="eyebrow reveal" style="justify-content:center;display:inline-flex;">FOR YOUR HISTORY</div>
+      <h2 class="cta-h2 reveal delay-1">あなたの応援を、<em>これからの証に。</em></h2>
+      <p class="cta-sub reveal delay-2">
+        応援してきた時間を、ただの思い出で終わらせない。<br>
+        CheerRINGで、あなたのファンヒストリーを始めませんか。
+      </p>
+
+      <!-- Countdown to beta launch (Oct 1, 2026) -->
+      <div class="reveal delay-2" id="countdownWrap" style="display:none;">
+        <p class="cd-title">クローズドβ開始まで</p>
+        <div class="countdown-strip" aria-label="カウントダウン">
+          <div class="cd-box"><div class="cd-num" id="cd-days">--</div><div class="cd-label">日</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><div class="cd-num" id="cd-hours">--</div><div class="cd-label">時間</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><div class="cd-num" id="cd-mins">--</div><div class="cd-label">分</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-box"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">秒</div></div>
+        </div>
+      </div>
+
+      <div class="reveal delay-3">
+        <form class="cta-form" id="earlyAccessForm">
+          <div class="cta-form-wrestler">
+            <select name="wrestler" class="cta-wrestler-select">
+              <option value="">応援している選手・団体（任意）</option>
+              <optgroup label="主要団体">
+                <option value="njpw">新日本プロレス</option>
+                <option value="ajpw">全日本プロレス</option>
+                <option value="noah">プロレスリング・ノア</option>
+                <option value="ddt">DDTプロレスリング</option>
+                <option value="dragon-gate">ドラゴンゲート</option>
+                <option value="zero1">プロレスリングZERO1</option>
+                <option value="bjw">大日本プロレス</option>
+                <option value="ice-ribbon">アイスリボン</option>
+                <option value="stardom">スターダム</option>
+              </optgroup>
+              <option value="other">その他の選手・団体</option>
+            </select>
+          </div>
+          <div class="cta-form-row">
+            <input type="email" name="email" class="cta-email-input" placeholder="メールアドレスを入力" required autocomplete="email" inputmode="email">
+            <input type="hidden" name="source" value="main-cta">
+            <button type="submit" class="btn-cta-big">
+              早期登録する
+              <span>→</span>
+            </button>
+          </div>
+          <p class="cta-form-note">無料 · スパムなし · いつでも解除可能</p>
+          <div class="cta-form-success" id="formSuccess" style="display:none;">
+            <div class="form-success-inner">
+              <div class="form-success-msg">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M20 6L9 17l-5-5"/></svg>
+                ご登録ありがとうございます！正式リリース時に優先案内をお届けします。
+              </div>
+              <div class="share-btns">
+                <a href="https://twitter.com/intent/tweet?text=%E3%83%97%E3%83%AD%E3%83%AC%E3%82%B9%E3%81%AE%E5%BF%9C%E6%8F%B4%E3%82%92%E8%A8%98%E9%8C%B2%E3%81%99%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BC%9A%E5%93%A1%E8%A8%BC%E3%80%8CCheerRING%E3%80%8D%E3%81%AB%E6%97%A9%E6%9C%9F%E7%99%BB%E9%8C%B2%E3%81%97%E3%81%9F%EF%BC%81%E5%BF%9C%E6%8F%B4%E3%81%97%E3%81%A6%E3%81%8D%E3%81%9F%E6%99%82%E9%96%93%E3%82%92%E3%80%81%E5%BD%A2%E3%81%AB%E3%81%97%E3%81%A6%E3%81%8F%E3%82%8C%E3%82%8B%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%80%82%20%23CheerRING%20%23%E3%83%97%E3%83%AD%E3%83%AC%E3%82%B9&url=https%3A%2F%2Fmanabu619.github.io%2Fcheerring%2F" target="_blank" rel="noopener" class="btn-share-x">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.843L1.958 2.25h6.826l4.272 5.644L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+                  X(Twitter)でシェア
+                </a>
+                <a href="https://line.me/R/msg/text/?%E3%83%97%E3%83%AD%E3%83%AC%E3%82%B9%E3%81%AE%E5%BF%9C%E6%8F%B4%E3%82%92%E8%A8%98%E9%8C%B2%E3%81%99%E3%82%8B%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%BC%9A%E5%93%A1%E8%A8%BC%E3%80%8CCheerRING%E3%80%8D%E3%81%AB%E6%97%A9%E6%9C%9F%E7%99%BB%E9%8C%B2%E3%81%97%E3%81%9F%EF%BC%81%20https%3A%2F%2Fmanabu619.github.io%2Fcheerring%2F" target="_blank" rel="noopener" class="btn-share-line">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 5.96 2 10.8c0 2.84 1.55 5.37 3.97 7.03L5 21l3.23-1.63c1.17.33 2.44.51 3.77.51 5.52 0 10-3.96 10-8.8C22 5.96 17.52 2 12 2zm5.63 11.71l-1.52-1.14c-.18-.13-.42-.12-.59.04l-.87.87c-.16.16-.4.18-.59.06-.57-.37-1.16-.82-1.65-1.31-.48-.48-.94-1.07-1.31-1.65-.12-.19-.1-.43.06-.59l.87-.87c.16-.17.17-.41.04-.59L10.93 7c-.15-.2-.42-.24-.61-.09l-.94.78c-.29.24-.46.59-.47.96-.02.67.18 2.06 1.87 3.75 1.69 1.69 3.08 1.89 3.75 1.87.37-.01.72-.18.96-.47l.78-.94c.15-.19.11-.46-.09-.61l-.55-.54z"/></svg>
+                  LINEでシェア
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p class="cta-note reveal delay-4">※ 早期登録受付は先着500名限定。正式リリース時に早期登録者限定価格を優先案内します。</p>
+      <div class="cta-trust reveal delay-5">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          特許第7825912号取得済み
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          デジタル会員証は応援の証です
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          プロレス専門特化設計
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">CheerRING</div>
+        <div class="footer-powered">powered by CheerLink / 合同会社小林PF</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://cheerlink-investor-noauth.vercel.app/sports/prowrestling" target="_blank" rel="noopener noreferrer">サービス本体（CheerLink）を見る →</a>
+        <a href="#" id="openTouModal" aria-haspopup="dialog">利用規約</a>
+        <a href="#" id="openPrivacyModal" aria-haspopup="dialog">プライバシーポリシー</a>
+        <a href="mailto:info@cheerlink.jp?subject=CheerRINGへのお問い合わせ">お問い合わせ</a>
+      </div>
+      <div class="footer-copy">© 2026 CheerLink. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ========= LEGAL MODALS ========= -->
+  <div class="legal-overlay" id="touModal" role="dialog" aria-modal="true" aria-labelledby="touModalTitle">
+    <div class="legal-modal">
+      <button class="legal-close-btn" data-close="touModal" aria-label="閉じる">✕</button>
+      <h2 id="touModalTitle">利用規約</h2>
+      <p>本規約は、CheerLink（合同会社小林PF）（以下「当社」）が提供するCheerRINGサービス（以下「本サービス」）の利用条件を定めるものです。</p>
+
+      <h3>第1条（適用）</h3>
+      <p>本規約は、本サービスの利用に関する当社と登録ユーザーとの間の権利義務関係を定めることを目的とし、登録ユーザーと当社との間の本サービスの利用に関わる一切の関係に適用されます。</p>
+
+      <h3>第2条（早期アクセス登録）</h3>
+      <p>早期アクセス登録は無料です。登録いただいたメールアドレスは、正式リリース時の優先案内・特別価格オファーの送付に使用します。スパムメールは送信しません。登録は随時解除可能です。</p>
+
+      <h3>第3条（デジタル会員証について）</h3>
+      <p>本サービスが提供するデジタル会員証は、プロレスファンとしての応援履歴・コミュニティ参加を証明するデジタル証明書です。ブロックチェーン技術を用いて記録する場合がありますが、投資・投機を目的とした商品ではなく、経済的リターンを約束するものではありません。</p>
+
+      <h3>第4条（禁止事項）</h3>
+      <p>ユーザーは以下の行為をしてはなりません。①法令または公序良俗に違反する行為、②他のユーザーまたは第三者の権利を侵害する行為、③当社の許可なく本サービスを商業目的に使用する行為、④当社のシステムへの不正アクセス。</p>
+
+      <h3>第5条（免責事項）</h3>
+      <p>当社は、本サービスに起因してユーザーに生じたあらゆる損害について、当社の故意または重過失による場合を除き、一切の責任を負いません。</p>
+
+      <h3>第6条（規約の変更）</h3>
+      <p>当社は、必要と判断した場合には、ユーザーに通知することなく本規約を変更することができます。変更後の規約は本サービス上に表示した時点から効力を生じるものとします。</p>
+
+      <h3>第7条（準拠法・管轄裁判所）</h3>
+      <p>本規約の解釈にあたっては、日本法を準拠法とし、本サービスに関して紛争が生じた場合には、当社所在地を管轄する裁判所を専属的合意管轄とします。</p>
+
+      <p style="margin-top:1.5rem;color:rgba(255,255,255,.4);font-size:.8rem;">制定日：2026年1月　合同会社小林PF / CheerLink</p>
+    </div>
+  </div>
+
+  <div class="legal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+    <div class="legal-modal">
+      <button class="legal-close-btn" data-close="privacyModal" aria-label="閉じる">✕</button>
+      <h2 id="privacyModalTitle">プライバシーポリシー</h2>
+      <p>CheerLink（合同会社小林PF）（以下「当社」）は、CheerRINGサービスにおける個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+
+      <h3>1. 収集する情報</h3>
+      <p>当社は、早期アクセス登録において以下の情報を収集します。①メールアドレス、②応援している選手・団体名（任意）。</p>
+
+      <h3>2. 利用目的</h3>
+      <p>収集した個人情報は、①正式リリース時の優先案内・特別価格オファーの送付、②サービス改善のための統計分析（個人を特定しない形式）、③法令に基づく対応、のみに使用します。</p>
+
+      <h3>3. 第三者への提供</h3>
+      <p>当社は、法令に基づく場合を除き、ユーザーの同意なく第三者へ個人情報を提供しません。ただし、メール配信サービス（Formspree等）へのデータ処理委託を行う場合があります。</p>
+
+      <h3>4. Cookie・アクセス解析</h3>
+      <p>本サービスでは、サービス改善のためアクセス解析ツールを使用する場合があります。これらのツールはCookieを使用し、個人を特定しない形式でデータを収集します。</p>
+
+      <h3>5. 情報の管理・保護</h3>
+      <p>当社は、収集した個人情報を適切に管理し、不正アクセス・紛失・改ざん等を防止するための合理的な安全対策を講じます。</p>
+
+      <h3>6. 開示・訂正・削除</h3>
+      <p>ユーザーは、当社が保有する自己の個人情報の開示・訂正・削除を求めることができます。お問い合わせは <a href="mailto:info@cheerlink.jp" style="color:#d4a843;">info@cheerlink.jp</a> までご連絡ください。</p>
+
+      <h3>7. 本ポリシーの変更</h3>
+      <p>当社は本ポリシーを随時変更することができます。重要な変更がある場合は、本サービス上でお知らせします。</p>
+
+      <p style="margin-top:1.5rem;color:rgba(255,255,255,.4);font-size:.8rem;">制定日：2026年1月　合同会社小林PF / CheerLink</p>
+    </div>
+  </div>
+
+  <!-- ========= STICKY DESKTOP CTA ========= -->
+  <div class="sticky-cta-desktop" id="stickyCtaDesktop">
+    <a href="#cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      早期登録する（無料）
+    </a>
+  </div>
+
+  <!-- ========= STICKY MOBILE CTA ========= -->
+  <div class="sticky-cta-mobile" id="stickyCta">
+    <a href="#cta" class="sticky-cta-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      早期登録する（無料）
+    </a>
+  </div>
+
+  <!-- ========= EXIT INTENT POPUP ========= -->
+  <div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+    <div class="exit-popup">
+      <button class="exit-close-btn" id="exitClose" aria-label="閉じる">✕</button>
+      <div class="exit-popup-eyebrow">Wait — 1 sec</div>
+      <h3 class="exit-popup-h" id="exitTitle">まだ間に合います。<br><em>早期登録は無料です。</em></h3>
+      <p class="exit-popup-body">
+        今登録すれば、正式リリース時に早期登録者限定の特別価格でご案内します。<br>
+        メールアドレスだけで完了。スパムは送りません。
+      </p>
+      <form class="exit-form" id="exitForm">
+        <input type="email" name="email" class="exit-email-input" placeholder="メールアドレスを入力" required autocomplete="email" inputmode="email">
+        <input type="hidden" name="source" value="exit-popup">
+        <button type="submit" class="exit-submit-btn">登録する</button>
+      </form>
+      <div class="exit-skip">
+        <a id="exitSkip">いいえ、特典は不要です</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========= SCRIPTS ========= -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ============================================
+       CROWD SVG (silhouettes)
+       ============================================ */
+    var NS = 'http://www.w3.org/2000/svg';
+    function el(t, a) { var e = document.createElementNS(NS, t); for (var k in a) e.setAttribute(k, a[k]); return e; }
+    function poly(p, pts, f) { p.appendChild(el('polygon', { points: pts, fill: f })); }
+
+    function drawFig(parent, cx, bottom, s, fill, pose) {
+      var BH = Math.round(64 * s), HR = Math.round(11 * s),
+          SW = Math.round(13 * s), HW = Math.round(8  * s),
+          AW = Math.round(6  * s), AL = Math.round(50 * s),
+          SIN = 0.574, COS = 0.819;
+      var sy = bottom - BH, hy = bottom, headY = sy - HR - Math.round(2 * s);
+      var g = el('g', { fill: fill });
+      g.appendChild(el('circle', { cx: cx, cy: headY, r: HR }));
+      poly(g, (cx-SW)+','+sy+' '+(cx-HW)+','+hy+' '+(cx+HW)+','+hy+' '+(cx+SW)+','+sy, fill);
+      if (pose === 'both' || pose === 'left') {
+        var lx = cx-SW, ex = lx - Math.round(SIN*AL), ey = sy - Math.round(COS*AL);
+        poly(g, lx+','+sy+' '+(lx-AW)+','+(sy-AW)+' '+ex+','+ey+' '+(ex+AW)+','+(ey+AW), fill);
+      } else {
+        var lx2 = cx-SW, dr = Math.round(38*s);
+        poly(g, lx2+','+sy+' '+(lx2-AW)+','+sy+' '+(lx2-AW-Math.round(3*s))+','+(sy+dr)+' '+lx2+','+(sy+dr), fill);
+      }
+      if (pose === 'both' || pose === 'right') {
+        var rx = cx+SW, ex2 = rx + Math.round(SIN*AL), ey2 = sy - Math.round(COS*AL);
+        poly(g, rx+','+sy+' '+(rx+AW)+','+(sy-AW)+' '+ex2+','+ey2+' '+(ex2-AW)+','+(ey2+AW), fill);
+      } else {
+        var rx2 = cx+SW, dr2 = Math.round(38*s);
+        poly(g, rx2+','+sy+' '+(rx2+AW)+','+sy+' '+(rx2+AW+Math.round(3*s))+','+(sy+dr2)+' '+rx2+','+(sy+dr2), fill);
+      }
+      parent.appendChild(g);
+    }
+
+    var POSES = ['both','right','left','both','stand','both','left','right','both','stand','both','right'];
+
+    function build(id, cfg) {
+      var svg = document.getElementById(id); if (!svg) return;
+      if (cfg.bg) svg.appendChild(el('rect', { width: 1100, height: cfg.h || 96, fill: cfg.bg }));
+      var bot = cfg.bot || 240;
+      (cfg.back  || []).forEach(function(x,i){ drawFig(svg, x, bot, cfg.bs||0.58, cfg.bf, POSES[i % POSES.length]); });
+      (cfg.mid   || []).forEach(function(x,i){ drawFig(svg, x, bot, cfg.ms||0.76, cfg.mf, POSES[(i+3) % POSES.length]); });
+      (cfg.front || []).forEach(function(x,i){ drawFig(svg, x, bot, cfg.fs||1.0,  cfg.ff, POSES[(i+1) % POSES.length]); });
+    }
+
+    build('strip-p-s', {
+      h: 96, bg: '#ffffff', bot: 96,
+      bf: '#1e1e30', mf: '#2e2e44', ff: '#424260',
+      bs: 0.44, ms: 0.58, fs: 0.0,
+      back:  [ 36, 116, 208, 314, 432, 558, 682, 800, 910, 1018 ],
+      mid:   [ 74, 160, 260, 372, 496, 622, 742, 858, 966 ],
+      front: []
+    });
+
+    build('crowd-main', {
+      bot: 236, h: 240, bg: 'transparent',
+      bf: '#1a1a2e', mf: '#28283e', ff: '#3a3a56',
+      bs: 0.57, ms: 0.75, fs: 1.0,
+      back:  [  36, 146, 258, 378, 502, 628, 752, 866, 974, 1066 ],
+      mid:   [  88, 198, 316, 432, 548, 664, 778, 892,  998 ],
+      front: [ 140, 248, 360, 458, 546, 636, 730, 836, 944 ]
+    });
+
+    /* ============================================
+       NAV: scroll state + burger
+       ============================================ */
+    var nav = document.getElementById('nav');
+    var burger = document.getElementById('navBurger');
+    function onScroll() {
+      if (window.scrollY > 24) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (burger) {
+      burger.addEventListener('click', function () {
+        nav.classList.toggle('menu-open');
+      });
+      // close on link click
+      document.querySelectorAll('.nav-links a').forEach(function (a) {
+        a.addEventListener('click', function () { nav.classList.remove('menu-open'); });
+      });
+    }
+
+    /* Scroll-spy: highlight active nav link */
+    (function() {
+      var sections = ['problem','solution','benefits','roadmap','faq','cta'];
+      var navAs = {};
+      sections.forEach(function(id) {
+        var a = document.querySelector('.nav-links a[href="#' + id + '"]');
+        if (a) navAs[id] = a;
+      });
+      function updateActive() {
+        var scrollY = window.scrollY + 120;
+        var current = '';
+        sections.forEach(function(id) {
+          var el = document.getElementById(id);
+          if (el && el.offsetTop <= scrollY) current = id;
+        });
+        sections.forEach(function(id) {
+          if (navAs[id]) navAs[id].classList.toggle('active', id === current);
+        });
+      }
+      window.addEventListener('scroll', updateActive, { passive: true });
+      updateActive();
+    }());
+
+    /* ============================================
+       Reveal-on-scroll
+       ============================================ */
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            en.target.classList.add('is-in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('is-in'); });
+    }
+
+    /* ============================================
+       Stats counter
+       ============================================ */
+    function animateCount(el) {
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var span = el.querySelector('span');
+      var start = performance.now();
+      var dur = 1400;
+      function tick(now) {
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var v = Math.round(target * eased);
+        el.firstChild.nodeValue = v;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    var statEls = document.querySelectorAll('.stat-num[data-count]');
+    if ('IntersectionObserver' in window && statEls.length) {
+      var sio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            animateCount(en.target);
+            sio.unobserve(en.target);
+          }
+        });
+      }, { threshold: 0.4 });
+      statEls.forEach(function (el) { sio.observe(el); });
+    } else {
+      statEls.forEach(animateCount);
+    }
+    /* ============================================
+       EARLY ACCESS FORM
+       ============================================ */
+    var CHEERRING_FORMSPREE_ID = 'YOUR_FORM_ID'; // FormspreeのフォームIDを設定すると実送信が有効になります。
+    function trackCheerRINGEvent(eventName, params) {
+      if (window.dataLayer && Array.isArray(window.dataLayer)) {
+        window.dataLayer.push(Object.assign({ event: eventName }, params || {}));
+      }
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, params || {});
+      }
+    }
+
+    var form = document.getElementById('earlyAccessForm');
+    var success = document.getElementById('formSuccess');
+    var submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+
+    function showSuccess() {
+      form.querySelector('.cta-form-row').style.display = 'none';
+      var noteEl = form.querySelector('.cta-form-note');
+      if (noteEl) noteEl.style.display = 'none';
+      if (success) {
+        success.style.display = 'flex';
+        success.setAttribute('aria-live', 'polite');
+      }
+    }
+
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = form.querySelector('input[type="email"]').value;
+        var wrestlerEl = form.querySelector('select[name="wrestler"]');
+        var wrestler = wrestlerEl ? wrestlerEl.value : '';
+
+        // ── Formspree への送信（フォームIDを設定して有効化） ──
+        var FORMSPREE_ID = CHEERRING_FORMSPREE_ID;
+        if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = '送信中…'; }
+          fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ email: email, wrestler: wrestler, source: 'main-cta', _subject: 'CheerRING 早期登録: ' + email })
+          })
+          .then(function(res) {
+            if (res.ok) {
+              trackCheerRINGEvent('early_access_submit', { source: 'main-cta', wrestler: wrestler || 'not_selected' });
+              showSuccess();
+            }
+            else { throw new Error('送信失敗'); }
+          })
+          .catch(function() {
+            // フォールバック: メール起動
+            trackCheerRINGEvent('early_access_mailto_fallback', { source: 'main-cta' });
+            window.location.href = 'mailto:info@cheerlink.jp?subject=CheerRING早期登録&body=メールアドレス: ' + encodeURIComponent(email) + (wrestler ? '%0A応援選手/団体: ' + encodeURIComponent(wrestler) : '') + '%0A登録元: main-cta';
+          });
+        } else {
+          // Formspree未設定時はメールクライアントへフォールバック
+          trackCheerRINGEvent('early_access_mailto_fallback', { source: 'main-cta' });
+          window.location.href = 'mailto:info@cheerlink.jp?subject=CheerRING早期登録&body=メールアドレス: ' + encodeURIComponent(email) + (wrestler ? '%0A応援選手/団体: ' + encodeURIComponent(wrestler) : '') + '%0A登録元: main-cta';
+          showSuccess();
+        }
+      });
+    }
+
+    /* ============================================
+       ANNOUNCEMENT BAR
+       ============================================ */
+    var annClose = document.getElementById('annClose');
+    var annBar = document.getElementById('announcementBar');
+    if (annClose && annBar) {
+      annClose.addEventListener('click', function() { annBar.classList.add('hidden'); });
+    }
+
+    /* Slot counter — deterministic per-day seed so it looks organic but doesn't fake data */
+    (function() {
+      var slotsEl = document.getElementById('annSlots');
+      if (!slotsEl) return;
+      var TOTAL = 500;
+      var LAUNCH_DATE = new Date('2026-03-01').getTime();
+      var now = Date.now();
+      // Days since launch — cap at 90 to prevent going too low
+      var daysElapsed = Math.min(90, Math.max(0, Math.floor((now - LAUNCH_DATE) / 86400000)));
+      // Start at 412 (day 0), decrease by ~1-2 per day deterministically
+      var pseudoRand = function(d) { return ((d * 1619 + 7) % 3); }; // 0, 1, or 2
+      var taken = 0;
+      for (var d = 0; d < daysElapsed; d++) { taken += 1 + pseudoRand(d); }
+      var remaining = Math.max(20, TOTAL - 88 - taken);
+      slotsEl.textContent = remaining;
+    }());
+
+    /* ============================================
+       COUNTDOWN TIMER
+       ============================================ */
+    (function() {
+      var wrap = document.getElementById('countdownWrap');
+      if (!wrap) return;
+      var TARGET = new Date('2026-10-01T00:00:00+09:00').getTime();
+      function pad(n) { return n < 10 ? '0' + n : '' + n; }
+      function tick() {
+        var diff = TARGET - Date.now();
+        if (diff <= 0) { wrap.style.display = 'none'; return; }
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent = d;
+        document.getElementById('cd-hours').textContent = pad(h);
+        document.getElementById('cd-mins').textContent = pad(m);
+        document.getElementById('cd-secs').textContent = pad(s);
+        wrap.style.display = '';
+      }
+      tick();
+      setInterval(tick, 1000);
+    }());
+
+    /* ============================================
+       READING PROGRESS BAR
+       ============================================ */
+    var progressBar = document.getElementById('progressBar');
+    if (progressBar) {
+      window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+        progressBar.style.width = pct + '%';
+      }, { passive: true });
+    }
+
+    /* ============================================
+       STICKY MOBILE CTA
+       ============================================ */
+    var stickyCta = document.getElementById('stickyCta');
+    var stickyCtaDesktop = document.getElementById('stickyCtaDesktop');
+    var heroSection = document.querySelector('.hero');
+    var ctaSection = document.getElementById('cta');
+    if (heroSection) {
+      window.addEventListener('scroll', function() {
+        var heroBottom = heroSection.getBoundingClientRect().bottom;
+        var ctaTop = ctaSection ? ctaSection.getBoundingClientRect().top : Infinity;
+        var show = heroBottom < 0 && ctaTop > window.innerHeight;
+        if (stickyCta) { stickyCta.classList.toggle('visible', show); }
+        if (stickyCtaDesktop) { stickyCtaDesktop.classList.toggle('visible', show); }
+      }, { passive: true });
+    }
+
+    /* ============================================
+       EXIT INTENT POPUP
+       ============================================ */
+    var exitOverlay = document.getElementById('exitOverlay');
+    var exitClose = document.getElementById('exitClose');
+    var exitSkip = document.getElementById('exitSkip');
+    var exitForm = document.getElementById('exitForm');
+    var exitShown = false;
+
+    function showExitPopup() {
+      if (!exitShown && exitOverlay) {
+        exitShown = true;
+        exitOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeExitPopup() {
+      if (exitOverlay) {
+        exitOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Desktop: mouseleave from top
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY < 10) showExitPopup();
+    });
+
+    // Mobile: user scrolls back up significantly
+    var lastScrollY = 0;
+    var scrollUpCount = 0;
+    window.addEventListener('scroll', function() {
+      var current = window.scrollY;
+      if (current < lastScrollY && current > 300) {
+        scrollUpCount++;
+        if (scrollUpCount > 3) showExitPopup();
+      } else {
+        scrollUpCount = 0;
+      }
+      lastScrollY = current;
+    }, { passive: true });
+
+    if (exitClose) exitClose.addEventListener('click', closeExitPopup);
+    if (exitSkip) exitSkip.addEventListener('click', closeExitPopup);
+    if (exitOverlay) {
+      exitOverlay.addEventListener('click', function(e) {
+        if (e.target === exitOverlay) closeExitPopup();
+      });
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeExitPopup();
+    });
+
+    if (exitForm) {
+      exitForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = exitForm.querySelector('input[type="email"]').value;
+        var FORMSPREE_ID = CHEERRING_FORMSPREE_ID;
+        if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+          fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ email: email, source: 'exit-popup', _subject: 'CheerRING 離脱防止登録: ' + email })
+          }).then(function() {
+            trackCheerRINGEvent('early_access_submit', { source: 'exit-popup' });
+            closeExitPopup();
+          }).catch(function() {
+            trackCheerRINGEvent('early_access_mailto_fallback', { source: 'exit-popup' });
+            closeExitPopup();
+          });
+        } else {
+          trackCheerRINGEvent('early_access_mailto_fallback', { source: 'exit-popup' });
+          window.location.href = 'mailto:info@cheerlink.jp?subject=CheerRING早期登録&body=メールアドレス: ' + encodeURIComponent(email) + '%0A登録元: exit-popup';
+          closeExitPopup();
+        }
+      });
+    }
+
+    /* ============================================
+       FAQ ACCORDION
+       ============================================ */
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        // close all
+        document.querySelectorAll('.faq-q').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.classList.remove('open');
+        });
+        // open clicked
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          this.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+
+  }());
+  </script>
+
+  <!-- ========= LEGAL MODAL SCRIPTS ========= -->
+  <script>
+  (function() {
+    'use strict';
+    function openModal(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var closeBtn = el.querySelector('.legal-close-btn');
+      if (closeBtn) closeBtn.focus();
+    }
+    function closeModal(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Open buttons
+    var touBtn = document.getElementById('openTouModal');
+    if (touBtn) touBtn.addEventListener('click', function(e) { e.preventDefault(); openModal('touModal'); });
+    var privBtn = document.getElementById('openPrivacyModal');
+    if (privBtn) privBtn.addEventListener('click', function(e) { e.preventDefault(); openModal('privacyModal'); });
+
+    // Close buttons (data-close attribute)
+    document.querySelectorAll('.legal-close-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() { closeModal(this.getAttribute('data-close')); });
+    });
+
+    // Close on overlay click
+    document.querySelectorAll('.legal-overlay').forEach(function(overlay) {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal(this.id);
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.legal-overlay.open').forEach(function(el) {
+          closeModal(el.id);
+        });
+      }
+    });
+  }());
+  </script>
+
+</body>
+</html>
