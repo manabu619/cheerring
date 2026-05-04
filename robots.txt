@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manabu619.github.io/cheerring/sitemap.xml
