@@ -1,7 +1,7 @@
 {
   "name": "CheerRing — この感動を、永遠に。",
   "short_name": "CheerRing",
-  "description": "プロレスを愛するファンのためのNFT会員証。応援してきた時間をあなたの証として残し、その参加を選手のこれからへ届けていく。",
+  "description": "プロレスを愛するファンのためのデジタル会員証。応援してきた時間をあなたの証として残し、その参加を選手のこれからへ届けていく。",
   "start_url": "/cheerring/",
   "scope": "/cheerring/",
   "display": "standalone",
