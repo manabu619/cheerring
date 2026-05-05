@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CheerRING — この感動を、永遠に。</title>
-  <meta name="description" content="CheerRINGは、プロレスファンのためのデジタル会員証。応援してきた時間を証として残し、選手のこれからへ届ける。特許取得済み。早期登録無料・先着500名限定。2026年秋クローズドβ開始予定。">
+  <meta name="description" content="あの夜、確かにそこにいた──でも、その記録はどこにもない。CheerRINGは、ファンの応援を消えない記録として残すプラットフォームです。特許取得済み。先着500名限定・早期登録無料。">
   <meta property="og:title" content="CheerRING — この感動を、永遠に。">
-  <meta property="og:description" content="プロレスファンのためのデジタル会員証。応援してきた時間を証として残す。特許第7825912号取得済み。先着500名限定・早期登録無料。">
+  <meta property="og:description" content="「あの夜、確かにそこにいた」──その事実が消えていく。CheerRINGは、ファンと選手の応援の記録を長く残すプラットフォーム。特許第7825912号取得済み。先着500名限定・早期登録無料。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://manabu619.github.io/cheerring/">
   <meta property="og:image" content="https://manabu619.github.io/cheerring/assets/images/hero_bg2.png">
@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CheerRING — この感動を、永遠に。">
-  <meta name="twitter:description" content="プロレスファンのためのデジタル会員証。応援してきた時間を証として残す。特許取得済み・先着500名限定・無料登録。">
+  <meta name="twitter:description" content="「あの夜、確かにそこにいた」──その事実が消えていく。ファンの応援を長く残す仕組み。特許取得済み・先着500名限定・無料登録。">
   <meta name="twitter:image" content="https://manabu619.github.io/cheerring/assets/images/hero_bg2.png">
   <link rel="canonical" href="https://manabu619.github.io/cheerring/">
   <link rel="manifest" href="manifest.json">
@@ -206,6 +206,7 @@
       --line: rgba(255,255,255,0.08);
       --text-mute: rgba(255,255,255,0.62);
       --text-mute-2: rgba(255,255,255,0.42);
+      --announcement-offset: 0px;
     }
 
     /* ---------- Utilities ---------- */
@@ -255,7 +256,7 @@
        NAV
        =================================================== */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: var(--announcement-offset); left: 0; right: 0; z-index: 100;
       background: rgba(6,6,14,0.72);
       backdrop-filter: blur(18px) saturate(140%);
       -webkit-backdrop-filter: blur(18px) saturate(140%);
@@ -270,7 +271,7 @@
       max-width: 1180px; margin: 0 auto; padding: 14px 32px;
       display: flex; align-items: center; justify-content: space-between; gap: 20px;
     }
-    .nav-logo-wrap { display: flex; align-items: baseline; gap: 12px; }
+    .nav-logo-wrap { display: flex; align-items: baseline; gap: 12px; flex-shrink: 0; }
     .nav-logo {
       font-family: 'Bebas Neue', sans-serif;
       color: var(--gold);
@@ -281,11 +282,12 @@
       color: rgba(255,255,255,0.32); font-size: 10px;
       letter-spacing: 0.18em; text-transform: uppercase;
     }
-    .nav-links { display: flex; gap: 30px; }
+    .nav-links { display: flex; align-items: center; gap: 22px; flex-shrink: 0; }
     .nav-links a {
       color: rgba(255,255,255,0.55); text-decoration: none;
       font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
       position: relative; transition: color .2s;
+      white-space: nowrap;
     }
     .nav-links a::after {
       content: ''; position: absolute; left: 0; bottom: -6px;
@@ -298,9 +300,10 @@
     .nav-links a.active::after { width: 100%; }
     .nav-cta {
       background: var(--red); color: #fff;
-      padding: 11px 22px; border-radius: 4px;
+      padding: 11px 18px; border-radius: 4px;
       font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
       text-decoration: none;
+      white-space: nowrap;
       transition: background .2s, transform .15s, box-shadow .2s;
       box-shadow: 0 4px 18px rgba(196,30,58,0.32);
     }
@@ -314,7 +317,7 @@
       display: block; width: 22px; height: 2px; background: #fff;
       margin: 4px 0; border-radius: 2px; transition: transform .3s, opacity .3s;
     }
-    @media (max-width: 820px) {
+    @media (max-width: 1080px) {
       .nav-links, .nav-cta { display: none; }
       .nav-burger { display: block; }
       nav.menu-open .nav-links {
@@ -1712,6 +1715,80 @@
       .btn-primary, .btn-cta-big, .nav-cta { border: 2px solid ButtonText; }
     }
 
+    /* ---------- Origin Story Section ---------- */
+    .origin-section {
+      background: var(--ink-2);
+      padding: 100px 0 90px;
+      position: relative; overflow: hidden;
+    }
+    .origin-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 50%, rgba(212,168,67,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .origin-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .origin-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .origin-scene {
+      position: relative;
+      border-left: 2px solid rgba(212,168,67,0.35);
+      padding-left: 28px;
+    }
+    .origin-date {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px; letter-spacing: 0.2em;
+      color: var(--gold-dark); margin-bottom: 16px;
+    }
+    .origin-quote {
+      font-size: clamp(18px, 2.2vw, 26px);
+      font-weight: 700; color: #fff;
+      line-height: 1.7; margin-bottom: 20px;
+    }
+    .origin-quote em { color: var(--gold); font-style: normal; }
+    .origin-body {
+      font-size: 15px; color: rgba(255,255,255,0.58);
+      line-height: 2; margin-bottom: 0;
+    }
+    .origin-caption {
+      font-size: 12px; color: rgba(255,255,255,0.32);
+      margin-top: 24px; letter-spacing: 0.05em;
+    }
+    .origin-insight { }
+    .origin-insight-title {
+      font-size: clamp(20px, 2.4vw, 30px);
+      font-weight: 700; color: #fff;
+      line-height: 1.6; margin-bottom: 24px;
+    }
+    .origin-insight-title em { color: var(--red); font-style: normal; }
+    .origin-insight-body {
+      font-size: 16px; color: rgba(255,255,255,0.62);
+      line-height: 2.1; margin-bottom: 28px;
+    }
+    .origin-rule {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,168,67,0.18);
+      border-radius: 8px;
+    }
+    .origin-rule-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: rgba(212,168,67,0.1);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+    }
+    .origin-rule-text {
+      font-size: 14px; color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+    }
+    .origin-rule-text strong { color: #fff; }
+
     /* ---------- Print ---------- */
     @media print {
       .progress-bar, #nav, .announcement-bar, .sticky-cta-mobile,
@@ -1761,8 +1838,9 @@
         <a href="html/proposal.html">資料</a>
         <a href="#faq">FAQ</a>
         <a href="#cta">参加する</a>
+        <a href="html/pay.html" style="color:var(--red);font-weight:700;">Founder Pass</a>
       </div>
-      <a href="#cta" class="nav-cta">会員証を受け取る →</a>
+      <a href="html/pay.html" class="nav-cta">Founder Pass を手に入れる →</a>
       <button class="nav-burger" id="navBurger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
@@ -1783,15 +1861,15 @@
         <div class="hero-urgency">🔴 早期アクセス登録 受付中</div>
         <div class="hero-patent-badge">🏅 特許第7825912号 取得済み</div>
       </div>
-      <div class="hero-eyebrow reveal">PRO WRESTLING — FAN MEMBERSHIP</div>
-      <div class="hero-script reveal delay-1">倒れた姿へ叫んだ声援<span class="dot"></span>立ち上がる姿に力をもらった</div>
+      <div class="hero-eyebrow reveal">FOR THE NIGHT YOU WERE THERE — FAN RECORD</div>
+      <div class="hero-script reveal delay-1">あの夜、確かにそこにいた<span class="dot"></span>でも、その記録はどこにも残らなかった</div>
       <h1 class="hero-headline reveal delay-2">
         この感動を、<br>
         <em>永遠に。</em>
       </h1>
       <p class="hero-sub reveal delay-3">
-        CheerRINGは、プロレスを愛するファンのためのデジタル会員証。<br>
-        <strong>応援してきた時間を、あなたの証に。その参加を、選手のこれからへ。</strong>
+        CheerRINGは、ファンの応援の記録を残すプラットフォームです。<br>
+        <strong>「あの夜、確かにそこにいた」── その事実が、消えないまま積み重なる場所。</strong>
       </p>
       <div class="hero-btns reveal delay-4">
         <a href="#cta" class="btn-primary">
@@ -1862,8 +1940,9 @@
         リングの外で起きている、<br><em>静かな現実。</em>
       </h2>
       <p class="section-body on-dark reveal delay-2">
-        平均引退年齢は37歳。現役期間はわずか15年前後。<br>
-        怪我、遠征、収入の波——華やかな試合の裏側で、選手は別の時間を生きている。
+        大会が終われば、あの夜の熱量は消える。<br>
+        何千人もが同じ時間の中で感動した事実が、誰の記録にも残らないまま——<br>
+        選手も、ファンも、それぞれ別の現実へと帰っていく。
       </p>
 
       <div class="problem-grid">
@@ -1885,8 +1964,8 @@
           <div class="prob-icon dark-red">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
           </div>
-          <div class="prob-title">「その日だけ」で終わる応援</div>
-          <div class="prob-body">チケットや物販で完結する一回性の応援。試合のない日々の選手とファンを、静かに繋ぎ続ける仕組みは、これまで用意されてこなかった。</div>
+          <div class="prob-title">あの夜の記録が残らない</div>
+          <div class="prob-body">大会が終われば、あの場にいた全員の気持ちは消える。何年もかけて積み上げてきた応援の時間が、「確かにそこにいた」という事実が、どこにも記録されないまま終わる。</div>
         </div>
         <div class="problem-card reveal delay-3">
           <div class="prob-icon dark-gold">
@@ -1899,6 +1978,55 @@
     </div>
     <div class="ring-rope gold bottom" style="bottom:18px;"></div>
     <div class="ring-rope bottom"></div>
+  </section>
+
+  <!-- ========= ORIGIN STORY (dark mid) ========= -->
+  <section class="origin-section" aria-label="CheerRING誕生の夜">
+    <div class="container">
+      <div class="eyebrow gold reveal">THE NIGHT THAT STARTED IT ALL</div>
+      <div class="origin-inner">
+
+        <div class="origin-scene reveal delay-1">
+          <div class="origin-date">2024年9月3日 — 後楽園ホール</div>
+          <div class="origin-quote">
+            あの場にいた全員が、<br>
+            <em>同じ時間の中にいた。</em><br>
+            でも、誰の記録にも残らなかった。
+          </div>
+          <p class="origin-body">
+            事故から7年。車椅子で後楽園ホールに現れた高山選手。<br>
+            「ノーフィアー」の合唱が響き渡り、鈴木みのる選手と二人が向き合った数分間。<br><br>
+            何千人もの人が泣いていた。8年分の応援が、その夜に凝縮されていた。<br>
+            大会が終わって——ファンたちは家に帰り、感動は消えた。<br>
+            「確かにそこにいた」という事実は、どこにも残らなかった。
+          </p>
+          <p class="origin-caption">TAKAYAMANIA EMPIRE 3 — このシーンがCheerRING誕生のきっかけです</p>
+        </div>
+
+        <div class="origin-insight reveal delay-2">
+          <div class="origin-insight-title">
+            善意だけでは、<br>
+            <em>記録は残らない。</em>
+          </div>
+          <p class="origin-insight-body">
+            高山選手を7年間支え続けた鈴木選手の行動は、プロレス界の誰もが知っている。<br>
+            それでも、あの夜の熱量はどこにも記録されていない。<br><br>
+            感動が消えていくのは、善意が足りないからではない。<br>
+            記録する仕組みが、なかったからだ。
+          </p>
+          <div class="origin-rule">
+            <div class="origin-rule-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="origin-rule-text">
+              <strong>CheerRING はその問いへの答えです。</strong><br>
+              ファンが一度だけ参加する。その記録は消えない。選手が引退した後も、応援は続く。
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- strip transition -->
@@ -2922,7 +3050,16 @@
     var annClose = document.getElementById('annClose');
     var annBar = document.getElementById('announcementBar');
     if (annClose && annBar) {
-      annClose.addEventListener('click', function() { annBar.classList.add('hidden'); });
+      function syncAnnouncementOffset() {
+        var offset = annBar.classList.contains('hidden') ? 0 : annBar.offsetHeight;
+        document.documentElement.style.setProperty('--announcement-offset', offset + 'px');
+      }
+      annClose.addEventListener('click', function() {
+        annBar.classList.add('hidden');
+        syncAnnouncementOffset();
+      });
+      window.addEventListener('resize', syncAnnouncementOffset);
+      syncAnnouncementOffset();
     }
 
     /* Slot counter — keep announcement consistent with the hero progress bar */

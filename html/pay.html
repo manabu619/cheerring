@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder Pass を手に入れる | CheerRING</title>
+  <meta name="description" content="CheerRING Founder Pass。第0章から選手の物語を共著する、最初のファンになる。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111111;
+      --muted: #6f6f6f;
+      --line: #dddddd;
+      --paper: #ffffff;
+      --soft: #f5f2ec;
+      --red: #c41e3a;
+      --red-dark: #96162b;
+      --gold: #c9a247;
+      --gold-light: #f5e8c4;
+      --shadow: 0 18px 48px rgba(17,17,17,.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.75;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+    .header-inner {
+      max-width: 900px; margin: 0 auto;
+      padding: 0 20px;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-size: 20px; font-weight: 900; letter-spacing: -0.01em; }
+    .brand span { color: var(--red); }
+    .back-link {
+      font-size: 13px; color: var(--muted);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .back-link::before { content: "←"; }
+    .back-link:hover { color: var(--ink); }
+
+    /* ── HERO ── */
+    .page-hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 72px 20px 64px;
+      text-align: center;
+    }
+    .hero-eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .hero-heading {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.22;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,.65);
+      max-width: 500px;
+      margin: 0 auto 36px;
+    }
+    .chapter-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,162,71,.15);
+      border: 1px solid rgba(201,162,71,.35);
+      color: var(--gold);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 7px 16px;
+      border-radius: 2px;
+    }
+    .chapter-badge::before {
+      content: "";
+      width: 7px; height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    /* ── MAIN ── */
+    .main { max-width: 900px; margin: 0 auto; padding: 60px 20px 100px; }
+
+    /* ── PLAN GRID ── */
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+    .plan-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 32px 28px 28px;
+      display: flex; flex-direction: column;
+      box-shadow: 0 4px 20px rgba(17,17,17,.06);
+      position: relative;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .plan-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .plan-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px var(--gold), var(--shadow);
+    }
+    .plan-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--gold);
+      color: #fff;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .plan-tier {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .plan-name {
+      font-size: 22px; font-weight: 900;
+      margin-bottom: 6px;
+    }
+    .plan-price {
+      font-size: 32px; font-weight: 900;
+      color: var(--red);
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+    .plan-price small {
+      font-size: 14px; font-weight: 400;
+      color: var(--muted);
+    }
+    .plan-onetime {
+      font-size: 11px; color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .plan-divider {
+      height: 1px; background: var(--line);
+      margin-bottom: 20px;
+    }
+    .plan-features {
+      list-style: none;
+      margin-bottom: 28px;
+      flex: 1;
+    }
+    .plan-features li {
+      font-size: 13px;
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+      color: #333;
+    }
+    .plan-features li::before {
+      content: "✓";
+      position: absolute; left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .plan-features li.muted { color: var(--muted); }
+    .plan-features li.muted::before { color: var(--line); }
+    .plan-cta {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      text-align: center;
+      font-size: 14px; font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+      text-decoration: none;
+    }
+    .plan-cta.primary {
+      background: var(--red);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(196,30,58,.3);
+    }
+    .plan-cta.primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(196,30,58,.4);
+    }
+    .plan-cta.secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--line);
+    }
+    .plan-cta.secondary:hover {
+      border-color: var(--ink);
+      background: var(--soft);
+    }
+    /* SETUP NOTICE: Stripe未設定時はボタンを無効化 */
+    .plan-cta[data-stripe="pending"] {
+      background: var(--line);
+      color: var(--muted);
+      cursor: not-allowed;
+      box-shadow: none;
+      pointer-events: none;
+    }
+
+    /* ── WHAT YOU GET ── */
+    .section-title {
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    .what-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 24px 20px;
+    }
+    .what-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .what-title {
+      font-size: 14px; font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .what-desc {
+      font-size: 12px; color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── CHAPTER STORY ── */
+    .story-block {
+      background: var(--ink);
+      color: #fff;
+      border-radius: 8px;
+      padding: 48px 40px;
+      margin-bottom: 64px;
+    }
+    .story-block .section-title { color: rgba(255,255,255,.4); }
+    .story-quote {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 600;
+      line-height: 1.4;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 16px;
+    }
+    .story-body {
+      font-size: 14px;
+      color: rgba(255,255,255,.55);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    /* ── FAQ ── */
+    .faq-list { margin-bottom: 64px; }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .faq-q {
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 8px;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: start;
+      gap: 12px;
+    }
+    .faq-q::after {
+      content: "+";
+      font-size: 20px; font-weight: 300;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: -2px;
+    }
+    .faq-a {
+      font-size: 14px; color: var(--muted);
+      line-height: 1.75;
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .faq-item.open .faq-q::after { content: "−"; }
+    .faq-item.open .faq-a { max-height: 200px; }
+
+    /* ── PRE-LAUNCH NOTICE ── */
+    .setup-notice {
+      background: #fff8e1;
+      border: 1.5px dashed #f5c518;
+      border-radius: 6px;
+      padding: 20px 24px;
+      font-size: 13px;
+      margin-bottom: 40px;
+      display: none; /* 本番では消す */
+    }
+    .setup-notice h3 { font-size: 14px; margin-bottom: 8px; }
+    .setup-notice code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .setup-notice ul { padding-left: 18px; margin-top: 8px; }
+    .setup-notice li { margin-bottom: 4px; }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      border-top: 1px solid var(--line);
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 12px; color: var(--muted);
+    }
+    .page-footer a { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .plans { grid-template-columns: 1fr; }
+      .story-block { padding: 36px 24px; }
+      .what-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">Cheer<span>RING</span></div>
+    <a href="../index.html" class="back-link">トップに戻る</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-eyebrow">Founder Pass — Limited</div>
+  <h1 class="hero-heading">第0章から、<br>一緒に物語を始めよう。</h1>
+  <p class="hero-sub">選手がまだ無名のとき、信じて応援した記録は消えない。<br>Founder Passは、その証明書だ。</p>
+  <div class="chapter-badge">第0章 参加受付中</div>
+</section>
+
+<main class="main">
+
+  <!-- PRE-LAUNCH NOTICE -->
+  <div class="setup-notice" id="setupNotice">
+    <h3>Founder Pass は現在準備中です</h3>
+    <p>正式受付の準備が整い次第、早期登録者の方から順番にご案内します。先行案内を希望される方は、トップページの早期アクセス登録をご利用ください。</p>
+  </div>
+
+  <!-- PLANS -->
+  <section aria-labelledby="plans-title">
+    <p class="section-title" id="plans-title">Founder Pass — 3 Tiers</p>
+    <div class="plans">
+
+      <!-- ORIGIN -->
+      <div class="plan-card featured">
+        <div class="plan-badge">最上位 · 限定30名</div>
+        <p class="plan-tier">Tier 1</p>
+        <h2 class="plan-name">ORIGIN</h2>
+        <div class="plan-price">¥50,000<small> 一括</small></div>
+        <p class="plan-onetime">入会金のみ・月額費用なし</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>選手からの月1メッセージ枠</li>
+          <li>全マイルストーン証明書（長期記録）</li>
+          <li>応援金額の85%を選手・団体側へ届ける設計</li>
+          <li>試合・イベント優先案内</li>
+          <li>「第0章 ORIGIN」刻印の参加証明書</li>
+          <li>引退後も続く支援記録</li>
+        </ul>
+        <a href="#"
+           class="plan-cta primary"
+           data-tier="ORIGIN"
+           data-stripe-url="STRIPE_PAYMENT_LINK_ORIGIN"
+           data-stripe="pending"
+           onclick="handlePayment(this); return false;">
+          ORIGIN で参加する
+        </a>
+      </div>
+
+      <!-- CHAPTER -->
+      <div class="plan-card">
+        <p class="plan-tier">Tier 2</p>
+        <h2 class="plan-name">CHAPTER</h2>
+        <div class="plan-price">¥20,000<small> 一括</small></div>
+        <p class="plan-onetime">入会金のみ・月額費用なし</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>全マイルストーン証明書（長期記録）</li>
+          <li>応援金額の85%を選手・団体側へ届ける設計</li>
+          <li>試合・イベント優先案内</li>
+          <li>「第0章 CHAPTER」参加証明書</li>
+          <li>引退後も続く支援記録</li>
+          <li class="muted">月1メッセージ枠（対象外）</li>
+        </ul>
+        <a href="#"
+           class="plan-cta secondary"
+           data-tier="CHAPTER"
+           data-stripe-url="STRIPE_PAYMENT_LINK_CHAPTER"
+           data-stripe="pending"
+           onclick="handlePayment(this); return false;">
+          CHAPTER で参加する
+        </a>
+      </div>
+
+      <!-- WITNESS -->
+      <div class="plan-card">
+        <p class="plan-tier">Tier 3</p>
+        <h2 class="plan-name">WITNESS</h2>
+        <div class="plan-price">¥5,000<small> 一括</small></div>
+        <p class="plan-onetime">入会金のみ・月額費用なし</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li>マイルストーン証明書（記念節目）</li>
+          <li>応援金額の85%を選手・団体側へ届ける設計</li>
+          <li>「第0章 WITNESS」参加証明書</li>
+          <li>引退後も続く支援記録</li>
+          <li class="muted">優先案内（対象外）</li>
+          <li class="muted">月1メッセージ枠（対象外）</li>
+        </ul>
+        <a href="#"
+           class="plan-cta secondary"
+           data-tier="WITNESS"
+           data-stripe-url="STRIPE_PAYMENT_LINK_WITNESS"
+           data-stripe="pending"
+           onclick="handlePayment(this); return false;">
+          WITNESS で参加する
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section aria-labelledby="what-title">
+    <p class="section-title" id="what-title">Founder Pass に含まれるもの</p>
+    <div class="what-grid">
+      <div class="what-item">
+        <div class="what-icon">📜</div>
+        <div class="what-title">参加証明書</div>
+        <div class="what-desc">「第0章から信じていた」という事実が、長く記録される。発行後の内容変更は原則として行いません。</div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">🏆</div>
+        <div class="what-title">マイルストーン通知</div>
+        <div class="what-desc">選手がタイトルを取った日、復帰した日、引退した日——あなたへ特別な記録が届く。</div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">💬</div>
+        <div class="what-title">選手からのメッセージ</div>
+        <div class="what-desc">月に一度、選手が直接届けるメッセージ。テキスト・音声・動画のいずれか。</div>
+      </div>
+      <div class="what-item">
+        <div class="what-icon">🔗</div>
+        <div class="what-title">引退後も続く繋がり</div>
+        <div class="what-desc">選手が現役を退いた後も、支援の記録は消えない。あなたの物語の一部として残り続ける。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY BLOCK -->
+  <div class="story-block">
+    <p class="section-title">なぜ「一括払い」なのか</p>
+    <p class="story-quote">"月額サブスクは、忘れたら終わり。<br>でも、本当の応援は忘れない。"</p>
+    <p class="story-body">
+      月額課金は継続を「お金」に依存させる仕組みです。<br>
+      CheerRINGは違います。一度だけ参加する。その記録は消えない。<br>
+      選手が引退した後も、あなたが「第0章から信じていた」という事実は<br>
+            長く記録に残り、その選手の物語の一部になります。
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <section aria-labelledby="faq-title">
+    <p class="section-title" id="faq-title">よくある質問</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">購入後、どうやって証明書を受け取れますか？</div>
+        <div class="faq-a">決済完了後、登録メールアドレス宛に証明書 PDF をお送りします。発行には通常1〜3営業日かかります。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">どの選手を応援するか、今決める必要がありますか？</div>
+        <div class="faq-a">いいえ。まず Founder Pass を取得した後、参加可能な選手の中から選べます。第0章の選手が決まり次第ご案内します。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">返金はできますか？</div>
+        <div class="faq-a">原則として、証明書発行後のキャンセル・返金には対応していません。ご不明点は購入前にお問い合わせください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">投資や金融商品ですか？</div>
+        <div class="faq-a">いいえ。CheerRING Founder Pass は選手への応援・支援であり、金融商品・投資商品ではありません。支援に対してリターンや利益の保証はありません。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">海外在住でも購入できますか？</div>
+        <div class="faq-a">正式受付時に、Stripe による国際クレジットカード決済へ対応予定です（Visa / Mastercard / American Express 等）。</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  <p>© 2026 CheerRING — 応援した記録を、長く残す。</p>
+  <p style="margin-top:8px;"><a href="../index.html">トップページ</a> · <a href="qa.html">Q&amp;A</a></p>
+</footer>
+
+<script>
+  /* ── Stripe Payment Link ハンドラ ── */
+  function handlePayment(btn) {
+    var url = btn.getAttribute('data-stripe-url');
+    var tier = btn.getAttribute('data-tier');
+    if (!url || url.indexOf('STRIPE_PAYMENT_LINK') === 0) {
+      // 未設定の場合：準備中モーダルを表示
+      showPendingModal(tier);
+      return;
+    }
+    window.location.href = url;
+  }
+
+  function showPendingModal(tier) {
+    var msg = document.createElement('div');
+    msg.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;';
+    msg.innerHTML = '<div style="background:#fff;border-radius:8px;padding:36px 32px;max-width:400px;text-align:center;">'
+      + '<div style="font-size:32px;margin-bottom:16px;">🔧</div>'
+      + '<h2 style="font-size:18px;margin-bottom:12px;">準備中です</h2>'
+      + '<p style="font-size:14px;color:#6f6f6f;line-height:1.7;margin-bottom:24px;">'
+      + '現在、' + tier + ' プランの決済準備を進めています。<br>'
+      + '準備が完了次第、このページでご購入いただけます。<br>もうしばらくお待ちください。'
+      + '</p>'
+      + '<button onclick="this.closest(\'div\').parentElement.remove()" '
+      + 'style="background:#c41e3a;color:#fff;border:none;padding:12px 28px;border-radius:4px;font-size:14px;font-weight:700;cursor:pointer;">閉じる</button>'
+      + '</div>';
+    document.body.appendChild(msg);
+    msg.addEventListener('click', function(e) {
+      if (e.target === msg) msg.remove();
+    });
+  }
+
+  /* ── FAQ アコーディオン ── */
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+
+  /* ── 準備中表示：Stripe未設定の場合のみ表示 ── */
+  var allPending = Array.from(document.querySelectorAll('[data-stripe]'))
+    .every(function(el) { return el.getAttribute('data-stripe') === 'pending'; });
+  if (allPending) {
+    document.getElementById('setupNotice').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>

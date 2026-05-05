@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder Pass 参加証明書 | CheerRING</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111111;
+      --muted: #6f6f6f;
+      --paper: #ffffff;
+      --soft: #f5f2ec;
+      --red: #c41e3a;
+      --red-dark: #96162b;
+      --gold: #b8943f;
+      --gold-light: #e8d5a0;
+      --gold-pale: #faf5e8;
+      --border: #d4b85a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #e8e3d8;
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 80px;
+      gap: 32px;
+    }
+
+    /* ── CONTROLS ── */
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .tier-btn {
+      padding: 10px 22px;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .tier-btn.origin  { background: #111; color: #b8943f; border-color: #b8943f; }
+    .tier-btn.chapter { background: #1a1a2e; color: #9aa8c8; border-color: #4a5a8a; }
+    .tier-btn.witness { background: #3a2a2a; color: #c89a7a; border-color: #8a5a4a; }
+    .tier-btn.active  { transform: scale(1.05); box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+
+    .print-btn {
+      padding: 10px 28px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+    }
+    .print-btn:hover { background: var(--red-dark); }
+
+    /* ── FILL-IN FIELDS ── */
+    .fields-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 13px;
+    }
+    .fields-row label { color: #555; font-size: 12px; }
+    .fields-row input {
+      padding: 6px 10px;
+      border: 1px solid #bbb;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: 13px;
+      width: 220px;
+    }
+    .field-group { display: flex; flex-direction: column; gap: 4px; }
+
+    /* ── CERTIFICATE WRAPPER ── */
+    .cert-wrap {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--paper);
+      box-shadow: 0 12px 40px rgba(0,0,0,.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Tier theming */
+    .cert-wrap.origin  { --accent: #b8943f; --accent2: #8a6d2f; --bg-tint: #faf7f0; --badge-bg: #111111; --badge-color: #b8943f; }
+    .cert-wrap.chapter { --accent: #4a6ba8; --accent2: #2a4a88; --bg-tint: #f5f7fc; --badge-bg: #1a1a2e; --badge-color: #9aa8c8; }
+    .cert-wrap.witness { --accent: #7a4a38; --accent2: #5a3028; --bg-tint: #fdf8f5; --badge-bg: #3a2a2a; --badge-color: #c89a7a; }
+
+    /* Background texture */
+    .cert-bg {
+      position: absolute; inset: 0;
+      background: var(--bg-tint);
+      z-index: 0;
+    }
+    .cert-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.6;
+    }
+
+    /* Ornamental border */
+    .cert-border {
+      position: absolute; inset: 14px;
+      border: 1px solid var(--accent);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .cert-border::before {
+      content: '';
+      position: absolute; inset: 5px;
+      border: 0.5px solid var(--accent);
+      opacity: 0.4;
+    }
+    /* Corner ornaments */
+    .cert-corner {
+      position: absolute; width: 28px; height: 28px;
+      z-index: 2;
+    }
+    .cert-corner.tl { top: 14px; left: 14px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .cert-corner.tr { top: 14px; right: 14px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+    .cert-corner.bl { bottom: 14px; left: 14px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .cert-corner.br { bottom: 14px; right: 14px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+    /* Content area */
+    .cert-content {
+      position: relative; z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 52px 60px 48px;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* Brand */
+    .cert-brand {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .cert-brand-sub {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 32px;
+    }
+
+    /* Ornament divider */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--accent);
+      margin: 18px 0;
+      width: 100%;
+    }
+    .ornament-line { flex: 1; height: 0.5px; background: var(--accent); opacity: 0.5; }
+    .ornament-diamond {
+      width: 7px; height: 7px;
+      background: var(--accent);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* Title area */
+    .cert-title-en {
+      font-family: "IM Fell English", serif;
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .cert-title-ja {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .cert-title-sub {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: #888;
+      margin-bottom: 0;
+    }
+
+    /* Badge */
+    .cert-badge {
+      background: var(--badge-bg);
+      color: var(--badge-color);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 7px 24px;
+      border-radius: 2px;
+      margin: 6px 0 24px;
+      border: 1px solid var(--accent);
+    }
+
+    /* Name area */
+    .cert-to {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 4px;
+    }
+    .cert-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      min-height: 44px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 4px;
+      min-width: 260px;
+    }
+    .cert-name:empty::after {
+      content: attr(data-placeholder);
+      color: #ccc;
+      font-style: italic;
+    }
+
+    /* Statement */
+    .cert-statement {
+      font-size: 12.5px;
+      line-height: 2;
+      color: #444;
+      max-width: 420px;
+      margin: 28px auto 0;
+    }
+    .cert-statement em {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* Athlete */
+    .cert-athlete-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 24px;
+      margin-bottom: 2px;
+    }
+    .cert-athlete {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.06em;
+      min-height: 28px;
+    }
+
+    /* Features grid */
+    .cert-features {
+      display: flex;
+      gap: 24px;
+      margin-top: 28px;
+      font-size: 10.5px;
+      color: #666;
+      letter-spacing: 0.04em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cert-feat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cert-feat::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Chapter & date */
+    .cert-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      margin-top: auto;
+      padding-top: 32px;
+      border-top: 0.5px solid rgba(0,0,0,.12);
+    }
+    .cert-meta-block { text-align: left; }
+    .cert-meta-block.right { text-align: right; }
+    .cert-meta-label {
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 2px;
+    }
+    .cert-meta-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+
+    /* Signature area */
+    .cert-sig {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .cert-sig-line {
+      width: 180px;
+      height: 0.5px;
+      background: #999;
+      margin: 0 auto 6px;
+    }
+    .cert-sig-name {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: #888;
+    }
+
+    /* ID / verification */
+    .cert-id-block {
+      margin-top: 20px;
+      font-size: 9px;
+      color: #bbb;
+      letter-spacing: 0.1em;
+      font-family: monospace;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; padding: 0; }
+      .controls, .fields-row, .print-btn, .page-title { display: none !important; }
+      .cert-wrap {
+        width: 210mm;
+        min-height: 297mm;
+        box-shadow: none;
+        page-break-after: avoid;
+      }
+    }
+
+    /* ── PAGE TITLE ── */
+    .page-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <p class="page-title">CheerRING — Founder Pass 参加証明書</p>
+
+  <!-- Tier selector -->
+  <div class="controls">
+    <button class="tier-btn origin active" onclick="setTier('origin')">ORIGIN — ¥50,000</button>
+    <button class="tier-btn chapter" onclick="setTier('chapter')">CHAPTER — ¥20,000</button>
+    <button class="tier-btn witness" onclick="setTier('witness')">WITNESS — ¥5,000</button>
+    <button class="print-btn" onclick="window.print()">🖨 印刷する</button>
+  </div>
+
+  <!-- Fill-in fields -->
+  <div class="fields-row">
+    <div class="field-group">
+      <label for="f-name">ファン名（証明書に表示）</label>
+      <input type="text" id="f-name" placeholder="例: 佐藤 健太" oninput="updateField('name', this.value)">
+    </div>
+    <div class="field-group">
+      <label for="f-athlete">選手名</label>
+      <input type="text" id="f-athlete" placeholder="例: 鈴木みのる" oninput="updateField('athlete', this.value)">
+    </div>
+    <div class="field-group">
+      <label for="f-date">発行日</label>
+      <input type="text" id="f-date" placeholder="例: 2026年5月5日" oninput="updateField('date', this.value)">
+    </div>
+    <div class="field-group">
+      <label for="f-id">証明書ID</label>
+      <input type="text" id="f-id" placeholder="例: CR-000001" oninput="updateField('id', this.value)">
+    </div>
+  </div>
+
+  <!-- Certificate -->
+  <div class="cert-wrap origin" id="cert">
+
+    <!-- Background -->
+    <div class="cert-bg"></div>
+
+    <!-- Border -->
+    <div class="cert-border"></div>
+    <div class="cert-corner tl"></div>
+    <div class="cert-corner tr"></div>
+    <div class="cert-corner bl"></div>
+    <div class="cert-corner br"></div>
+
+    <!-- Content -->
+    <div class="cert-content">
+
+      <div class="cert-brand">CheerRING</div>
+      <div class="cert-brand-sub">Pro Wrestling Fan History Archive</div>
+
+      <div class="ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+
+      <div class="cert-title-en">Certificate of Participation</div>
+      <div class="cert-title-ja" id="cert-title-ja">第0章 参加証明書</div>
+      <div class="cert-title-sub" id="cert-title-sub">CHAPTER ZERO — FOUNDER'S RECORD</div>
+
+      <div class="cert-badge" id="cert-badge">ORIGIN FOUNDER</div>
+
+      <div class="cert-to">この証明書は以下の方に授与されます</div>
+      <div class="cert-name" id="cert-name" data-placeholder="Fan Name"></div>
+
+      <div class="cert-statement" id="cert-statement">
+        あなたは、<em id="cert-athlete-inline">──</em> 選手のCheerRINGに<br>
+        最初のFounder（創設者）として参加しました。<br>
+        この応援の記録は、<br>
+        選手のキャリアと共に長く残ります。
+      </div>
+
+      <div class="cert-athlete-label">参加選手</div>
+      <div class="cert-athlete" id="cert-athlete">──</div>
+
+      <div class="cert-features" id="cert-features">
+        <div class="cert-feat">終身参加記録</div>
+        <div class="cert-feat">第0章認定</div>
+        <div class="cert-feat">ORIGIN特典付与</div>
+        <div class="cert-feat">引退後も継続</div>
+      </div>
+
+      <div class="cert-meta">
+        <div class="cert-meta-block">
+          <div class="cert-meta-label">Chapter</div>
+          <div class="cert-meta-value">第0章（プレオープン）</div>
+        </div>
+        <div class="cert-sig">
+          <div class="cert-sig-line"></div>
+          <div class="cert-sig-name">CHEERRING PROJECT / 新保 Manabu</div>
+        </div>
+        <div class="cert-meta-block right">
+          <div class="cert-meta-label">発行日</div>
+          <div class="cert-meta-value" id="cert-date">2026年　　月　　日</div>
+        </div>
+      </div>
+
+      <div class="cert-id-block" id="cert-id">Certificate ID: CR-000000</div>
+
+    </div>
+  </div>
+
+  <script>
+    var tiers = {
+      origin: {
+        badge: 'ORIGIN FOUNDER',
+        titleJa: '第0章 参加証明書',
+        titleSub: 'CHAPTER ZERO — FOUNDER\'S RECORD',
+        statement: 'あなたは、<em id="cert-athlete-inline">──</em> 選手のCheerRINGに<br>最初のFounder（創設者）として参加しました。<br>この応援の記録は、<br>選手のキャリアと共に長く残ります。',
+        features: ['長期参加記録', '第0章認定', 'ORIGIN全特典', '引退後も継続', '最上位認定']
+      },
+      chapter: {
+        badge: 'CHAPTER FOUNDER',
+        titleJa: '第0章 参加証明書',
+        titleSub: 'CHAPTER ZERO — SUPPORTER\'S RECORD',
+        statement: 'あなたは、<em id="cert-athlete-inline">──</em> 選手のCheerRINGに<br>Founder（創設者）として参加しました。<br>この応援の記録は、<br>選手の物語の一部として長く残ります。',
+        features: ['長期参加記録', '第0章認定', 'CHAPTER特典付与', '引退後も継続']
+      },
+      witness: {
+        badge: 'WITNESS FOUNDER',
+        titleJa: '第0章 参加証明書',
+        titleSub: 'CHAPTER ZERO — WITNESS RECORD',
+        statement: 'あなたは、<em id="cert-athlete-inline">──</em> 選手のCheerRINGに<br>Witness（証人）として参加しました。<br>あなたの応援の意思は記録され、<br>選手のキャリアと共に永く残ります。',
+        features: ['長期参加記録', '第0章認定', 'WITNESS特典付与', '引退後も継続']
+      }
+    };
+
+    var currentTier = 'origin';
+    var currentValues = { name: '', athlete: '', date: '', id: '' };
+
+    function setTier(tier) {
+      currentTier = tier;
+      var cert = document.getElementById('cert');
+      cert.className = 'cert-wrap ' + tier;
+
+      // Update buttons
+      document.querySelectorAll('.tier-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      document.querySelector('.tier-btn.' + tier).classList.add('active');
+
+      var t = tiers[tier];
+      document.getElementById('cert-badge').textContent = t.badge;
+      document.getElementById('cert-title-ja').textContent = t.titleJa;
+      document.getElementById('cert-title-sub').textContent = t.titleSub;
+      document.getElementById('cert-statement').innerHTML = t.statement.replace('──', currentValues.athlete || '──');
+
+      var feats = document.getElementById('cert-features');
+      feats.innerHTML = t.features.map(function(f) {
+        return '<div class="cert-feat">' + f + '</div>';
+      }).join('');
+
+      updateAthleteInline();
+    }
+
+    function updateField(field, value) {
+      currentValues[field] = value;
+      if (field === 'name') {
+        var nameEl = document.getElementById('cert-name');
+        nameEl.textContent = value;
+      }
+      if (field === 'athlete') {
+        document.getElementById('cert-athlete').textContent = value || '──';
+        updateAthleteInline();
+      }
+      if (field === 'date') {
+        document.getElementById('cert-date').textContent = value || '2026年　　月　　日';
+      }
+      if (field === 'id') {
+        document.getElementById('cert-id').textContent = 'Certificate ID: ' + (value || 'CR-000000');
+      }
+    }
+
+    function updateAthleteInline() {
+      var el = document.getElementById('cert-athlete-inline');
+      if (el) el.textContent = currentValues.athlete || '──';
+    }
+
+    // Set today's date as default
+    (function() {
+      var now = new Date();
+      var y = now.getFullYear();
+      var m = now.getMonth() + 1;
+      var d = now.getDate();
+      var dateStr = y + '年' + m + '月' + d + '日';
+      document.getElementById('f-date').value = dateStr;
+      document.getElementById('cert-date').textContent = dateStr;
+    })();
+  </script>
+</body>
+</html>
