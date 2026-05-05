@@ -26,10 +26,10 @@ CheerRING/
 ├── assets/
 │   ├── images/             # LP用画像（hero_bg2.webp等）
 │   └── models/             # 図解画像（B2Bページ用）
-├── hub-staging/            # 内部ハブHTML（private repoへ同期）
-├── README.md               # このファイル
-└── Document/               # 設計・資料・作業メモ
+└── README.md               # このファイル
 ```
+
+内部検討資料、作業メモ、財務・法務資料はこの公開リポジトリには含めません。
 
 ## ローカル確認方法
 
