@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (将来的に使う場合)
+node_modules/
+npm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# 内部資料（公開リポジトリに含めない）
+Document/
+.lazyweb/
+hub-staging/
+.codex_spreadsheet_work/

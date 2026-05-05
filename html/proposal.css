@@ -111,7 +111,7 @@ a { color: inherit; }
   background:
     linear-gradient(90deg, rgba(7,7,14,.92), rgba(7,7,14,.74) 42%, rgba(7,7,14,.28)),
     linear-gradient(180deg, rgba(7,7,14,.42), rgba(7,7,14,.94)),
-    url("hero_bg2.webp") center / cover no-repeat;
+    url("../assets/images/hero_bg2.webp") center / cover no-repeat;
 }
 .hero-grid {
   display: grid;

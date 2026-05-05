@@ -1,6 +1,6 @@
 {
-  "name": "CheerRing — この感動を、永遠に。",
-  "short_name": "CheerRing",
+  "name": "CheerRING — この感動を、永遠に。",
+  "short_name": "CheerRING",
   "description": "プロレスを愛するファンのためのデジタル会員証。応援してきた時間をあなたの証として残し、その参加を選手のこれからへ届けていく。",
   "start_url": "/cheerring/",
   "scope": "/cheerring/",
@@ -23,7 +23,7 @@
       "src": "hero_bg2.png",
       "sizes": "1200x630",
       "type": "image/png",
-      "label": "CheerRing ランディングページ"
+      "label": "CheerRING ランディングページ"
     }
   ]
 }
