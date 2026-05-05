@@ -243,7 +243,7 @@
     .section-body.on-dark { color: rgba(255,255,255,0.62); }
 
     /* fade-in animation for IntersectionObserver */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal { opacity: 1; transform: none; transition: opacity .9s ease, transform .9s ease; }
     .reveal.is-in { opacity: 1; transform: none; }
     .reveal.delay-1 { transition-delay: .12s; }
     .reveal.delay-2 { transition-delay: .24s; }
@@ -353,10 +353,14 @@
     .hero-overlay {
       position: absolute; inset: 0;
       background:
+        linear-gradient(90deg,
+          rgba(6,6,14,0.92) 0%,
+          rgba(6,6,14,0.72) 38%,
+          rgba(6,6,14,0.28) 100%),
         linear-gradient(180deg,
-          rgba(6,6,14,0.85) 0%,
-          rgba(6,6,14,0.45) 38%,
-          rgba(6,6,14,0.65) 70%,
+          rgba(6,6,14,0.92) 0%,
+          rgba(6,6,14,0.52) 38%,
+          rgba(6,6,14,0.70) 70%,
           rgba(6,6,14,1) 100%);
     }
     .hero-spot {
@@ -481,6 +485,47 @@
       transition: border-color .2s, color .2s, background .2s;
     }
     .btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: rgba(212,168,67,0.06); }
+
+    .hero-proof-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 760px;
+      margin-top: 28px;
+    }
+    .hero-proof-item {
+      min-height: 104px;
+      padding: 16px 17px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(6,6,14,0.54);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+    }
+    .hero-proof-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .hero-proof-item span {
+      display: block;
+      color: rgba(255,255,255,0.64);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .hero-proof-item .proof-index {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 760px) {
+      .hero-proof-strip { grid-template-columns: 1fr; margin-top: 22px; }
+      .hero-proof-item { min-height: auto; }
+    }
 
     /* hero stats */
     .hero-stats {
@@ -891,6 +936,31 @@
   display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
   margin-top: 48px; max-width: 760px;
 }
+.pricing-context {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 760px;
+  margin-top: 34px;
+}
+.pricing-context-item {
+  padding: 16px 18px;
+  background: #f8f8fc;
+  border: 1px solid #e8e8f0;
+  border-radius: 8px;
+}
+.pricing-context-item strong {
+  display: block;
+  color: #1a1a2e;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.pricing-context-item span {
+  display: block;
+  color: #77778d;
+  font-size: 12px;
+  line-height: 1.65;
+}
 .pricing-card {
   border: 2px solid #e0e0ee; border-radius: 12px;
   padding: 32px 28px; position: relative;
@@ -943,6 +1013,7 @@
 }
 .pricing-note { font-size: 12px; color: #b0b0c0; margin-top: 22px; text-align: center; }
 @media (max-width: 640px) {
+  .pricing-context { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
 }
 
@@ -1687,6 +1758,7 @@
         <a href="#solution">解決策</a>
         <a href="#benefits">特典</a>
         <a href="#roadmap">ロードマップ</a>
+        <a href="proposal.html">資料</a>
         <a href="#faq">FAQ</a>
         <a href="#cta">参加する</a>
       </div>
@@ -1727,6 +1799,23 @@
           <span class="arrow">→</span>
         </a>
         <a href="#solution" class="btn-ghost">CheerRINGとは</a>
+      </div>
+      <div class="hero-proof-strip reveal delay-5" aria-label="登録後に受け取れるもの">
+        <div class="hero-proof-item">
+          <span class="proof-index">01</span>
+          <strong>応援の記録が残る</strong>
+          <span>いつ、誰を、どれだけ応援したかをデジタル会員証として残します。</span>
+        </div>
+        <div class="hero-proof-item">
+          <span class="proof-index">02</span>
+          <strong>選手の近況が届く</strong>
+          <span>月次メッセージや限定案内など、試合日以外の接点を受け取れます。</span>
+        </div>
+        <div class="hero-proof-item">
+          <span class="proof-index">03</span>
+          <strong>優先案内を受け取る</strong>
+          <span>正式リリース時の価格・特典・参加条件を早期登録者へ先に案内します。</span>
+        </div>
       </div>
     </div>
 
@@ -2066,18 +2155,33 @@
   <section class="pricing-section">
     <div class="container">
       <div class="eyebrow reveal">EARLY BIRD</div>
-      <h2 class="section-h2 reveal delay-1">早期登録者だけの、<br><em>特別な条件。</em></h2>
+      <h2 class="section-h2 reveal delay-1">無料登録で、正式リリースの<br><em>優先案内を受け取る。</em></h2>
       <p class="section-body reveal delay-2">
-        正式リリース時の価格は、早期登録者へ優先的にご案内します。<br>今登録することで、最もお得な条件でスタートできます。
+        今の登録で決済は発生しません。正式リリース前に、価格・特典・参加条件を早期登録者へ優先的にご案内します。
       </p>
+
+      <div class="pricing-context reveal delay-2">
+        <div class="pricing-context-item">
+          <strong>登録は無料</strong>
+          <span>必要なのはメールアドレスだけ。ウォレットや暗号資産の準備は不要です。</span>
+        </div>
+        <div class="pricing-context-item">
+          <strong>価格は事前案内</strong>
+          <span>正式価格と特典内容は、リリース前に早期登録者へ先にお知らせします。</span>
+        </div>
+        <div class="pricing-context-item">
+          <strong>いつでも解除可能</strong>
+          <span>案内が不要になった場合は、メールからいつでも解除できます。</span>
+        </div>
+      </div>
 
       <div class="pricing-grid">
         <div class="pricing-card featured reveal delay-1">
-          <div class="pricing-badge-top">早期登録者限定</div>
+          <div class="pricing-badge-top">優先案内</div>
           <div class="pricing-tier">Early Bird</div>
           <div class="pricing-price strike" style="font-size:15px;opacity:.5;text-decoration:line-through;">通常予定価格 月額 1,480円〜</div>
           <div class="pricing-price"><sup style="font-size:14px;">月額</sup> <span style="font-size:42px;font-weight:900;letter-spacing:-.02em;">980円〜</span><sub style="font-size:12px;opacity:.7;">（早期登録者限定・想定価格）</sub></div>
-          <div class="pricing-period" style="margin-top:4px;">年払いオプションあり（2ヶ月分お得）</div>
+          <div class="pricing-period" style="margin-top:4px;">正式リリース前に優先案内</div>
           <ul class="pricing-features">
             <li>デジタル会員証（ファンヒストリー記録）</li>
             <li>先行参戦権（限定席への優先案内）</li>
@@ -2086,7 +2190,7 @@
             <li>特別興行エントリー権</li>
             <li>早期登録者限定 特別価格案内</li>
           </ul>
-          <a href="#cta" class="pricing-cta-btn primary">今すぐ早期登録する →</a>
+          <a href="#cta" class="pricing-cta-btn primary">無料で優先案内を受け取る →</a>
         </div>
 
         <div class="pricing-card reveal delay-2">
@@ -2101,10 +2205,10 @@
             <li>特別興行エントリー権</li>
             <li class="muted">早期登録者限定特典なし</li>
           </ul>
-          <a href="#cta" class="pricing-cta-btn secondary">早期登録して特典を受け取る</a>
+          <a href="#cta" class="pricing-cta-btn secondary">正式案内を受け取る</a>
         </div>
       </div>
-      <p class="pricing-note reveal delay-3">※ 表示価格はサービス設計上の想定価格です。正式価格は正式リリース前に早期登録者へ優先案内します。価格・内容は変更になる場合があります。</p>
+      <p class="pricing-note reveal delay-3">※ 表示価格はサービス設計上の想定価格です。登録時点で決済は発生しません。正式価格・特典内容は変更になる場合があります。</p>
     </div>
   </section>
 
@@ -2821,20 +2925,14 @@
       annClose.addEventListener('click', function() { annBar.classList.add('hidden'); });
     }
 
-    /* Slot counter — deterministic per-day seed so it looks organic but doesn't fake data */
+    /* Slot counter — keep announcement consistent with the hero progress bar */
     (function() {
       var slotsEl = document.getElementById('annSlots');
       if (!slotsEl) return;
       var TOTAL = 500;
-      var LAUNCH_DATE = new Date('2026-03-01').getTime();
-      var now = Date.now();
-      // Days since launch — cap at 90 to prevent going too low
-      var daysElapsed = Math.min(90, Math.max(0, Math.floor((now - LAUNCH_DATE) / 86400000)));
-      // Start at 412 (day 0), decrease by ~1-2 per day deterministically
-      var pseudoRand = function(d) { return ((d * 1619 + 7) % 3); }; // 0, 1, or 2
-      var taken = 0;
-      for (var d = 0; d < daysElapsed; d++) { taken += 1 + pseudoRand(d); }
-      var remaining = Math.max(20, TOTAL - 88 - taken);
+      var registeredEl = document.getElementById('regCount');
+      var registered = registeredEl ? parseInt(registeredEl.textContent, 10) : 312;
+      var remaining = Math.max(0, TOTAL - registered);
       slotsEl.textContent = remaining;
     }());
 
