@@ -3,9 +3,37 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://manabu619.github.io/cheerring/</loc>
-    <lastmod>2026-05-01</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ja" href="https://manabu619.github.io/cheerring/"/>
+  </url>
+  <url>
+    <loc>https://manabu619.github.io/cheerring/b2b.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://manabu619.github.io/cheerring/b2b.html"/>
+  </url>
+  <url>
+    <loc>https://manabu619.github.io/cheerring/proposal.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://manabu619.github.io/cheerring/proposal.html"/>
+  </url>
+  <url>
+    <loc>https://manabu619.github.io/cheerring/athlete.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://manabu619.github.io/cheerring/athlete.html"/>
+  </url>
+  <url>
+    <loc>https://manabu619.github.io/cheerring/qa.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://manabu619.github.io/cheerring/qa.html"/>
   </url>
 </urlset>
