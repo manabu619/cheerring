@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記 | CheerRING</title>
+  <meta name="description" content="CheerRING Founder Passの特定商取引法に基づく表記">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #111111;
+      --muted: #6f6f6f;
+      --line: #e0e0e0;
+      --paper: #ffffff;
+      --soft: #f8f7f4;
+      --red: #c41e3a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      color: var(--ink);
+      background: var(--soft);
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+    a { color: var(--red); }
+    a:hover { opacity: 0.8; }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .header-inner {
+      max-width: 800px; margin: 0 auto;
+      padding: 0 20px;
+      height: 60px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-size: 18px; font-weight: 900; letter-spacing: -0.01em; }
+    .brand span { color: var(--red); }
+    .back-link {
+      font-size: 13px; color: var(--muted);
+      display: flex; align-items: center; gap: 6px;
+      text-decoration: none;
+    }
+    .back-link::before { content: "←"; }
+    .back-link:hover { color: var(--ink); }
+
+    /* ── CONTENT ── */
+    .page-wrap {
+      max-width: 800px; margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .page-title {
+      font-size: 22px; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .page-subtitle {
+      font-size: 13px; color: var(--muted);
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    /* ── TABLE ── */
+    .tokusho-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .tokusho-table th,
+    .tokusho-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+    .tokusho-table th {
+      width: 180px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #444;
+      background: #fafafa;
+      white-space: nowrap;
+    }
+    .tokusho-table td {
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .tokusho-table tr:last-child th,
+    .tokusho-table tr:last-child td {
+      border-bottom: none;
+    }
+    .tokusho-table td em {
+      font-style: normal;
+      color: var(--muted);
+      font-size: 12px;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* 要入力プレースホルダー */
+    .placeholder {
+      color: #cc5500;
+      font-weight: 700;
+    }
+
+    /* 価格リスト */
+    .price-list { list-style: none; }
+    .price-list li {
+      display: flex; justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .price-list li:last-child { border-bottom: none; }
+    .price-list .tier { font-weight: 700; }
+    .price-list .amount { font-weight: 700; color: var(--red); }
+
+    /* ── NOTE ── */
+    .notice {
+      margin-top: 40px;
+      padding: 20px 24px;
+      background: #fff8f0;
+      border-left: 3px solid #f5a623;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.8;
+    }
+    .notice strong { color: #cc5500; }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .page-footer a { color: var(--muted); text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .tokusho-table th { width: 120px; font-size: 12px; padding: 14px 12px; }
+      .tokusho-table td { font-size: 13px; padding: 14px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">Cheer<span>RING</span></div>
+    <a href="../html/pay.html" class="back-link">Founder Passページへ戻る</a>
+  </div>
+</header>
+
+<div class="page-wrap">
+  <h1 class="page-title">特定商取引法に基づく表記</h1>
+  <p class="page-subtitle">CheerRING Founder Pass — 通信販売に関する表記</p>
+
+  <table class="tokusho-table">
+    <tbody>
+      <tr>
+        <th>販売業者</th>
+        <td>新保 学（シンボ マナブ）</td>
+      </tr>
+      <tr>
+        <th>代表者</th>
+        <td>新保 学</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>
+          <span class="placeholder">[住所を記載してください]</span>
+          <em>※ ご請求をいただいた場合、遅滞なく開示いたします。</em>
+        </td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td>
+          <span class="placeholder">[電話番号を記載してください]</span>
+          <em>※ ご請求をいただいた場合、遅滞なく開示いたします。</em>
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td><a href="mailto:manabu619@gmail.com">manabu619@gmail.com</a></td>
+      </tr>
+      <tr>
+        <th>サービス名</th>
+        <td>CheerRING Founder Pass</td>
+      </tr>
+      <tr>
+        <th>販売価格</th>
+        <td>
+          <ul class="price-list">
+            <li>
+              <span class="tier">ORIGIN Founder Pass</span>
+              <span class="amount">¥50,000（税込）</span>
+            </li>
+            <li>
+              <span class="tier">CHAPTER Pass</span>
+              <span class="amount">¥20,000（税込）</span>
+            </li>
+            <li>
+              <span class="tier">WITNESS Pass</span>
+              <span class="amount">¥5,000（税込）</span>
+            </li>
+          </ul>
+          <em>※ 上記価格はすべて日本円・消費税込みです。</em>
+        </td>
+      </tr>
+      <tr>
+        <th>支払方法</th>
+        <td>
+          クレジットカード（Visa・Mastercard・American Express・JCB）<br>
+          決済代行：Stripe, Inc.
+        </td>
+      </tr>
+      <tr>
+        <th>支払時期</th>
+        <td>お申し込み時にお支払いが確定します。</td>
+      </tr>
+      <tr>
+        <th>サービス提供時期</th>
+        <td>
+          お支払い確認後、メールにてご案内いたします。<br>
+          <em>※ 現在クローズドベータ版の準備段階です。正式リリース時に早期登録者へ優先案内をお送りします。</em>
+        </td>
+      </tr>
+      <tr>
+        <th>サービス内容</th>
+        <td>
+          CheerRING は、プロレスファンの応援記録をデジタル会員証として永続的に保存するプラットフォームです。<br><br>
+          Founder Pass 購入者には以下が提供されます：
+          <ul style="margin-top:10px; padding-left:16px; line-height:2;">
+            <li>デジタル会員証（応援記録の永続保存）</li>
+            <li>参加選手からの月次メッセージ</li>
+            <li>正式リリース時の優先アクセス・特典案内</li>
+            <li>各ティアに応じた限定特典（詳細はリリース時案内）</li>
+          </ul>
+          <em>※ 特典の詳細はサービス正式開始時に確定します。現在は先行購入・早期サポーター向けの提供です。</em>
+        </td>
+      </tr>
+      <tr>
+        <th>返品・キャンセル</th>
+        <td>
+          デジタルコンテンツ・会員権の性質上、<strong>購入後の返金・キャンセルはお受けしておりません</strong>。<br><br>
+          ただし、サービスを提供できない場合（正式リリースの中止等）は、全額返金いたします。<br>
+          ご不明な点は購入前に <a href="mailto:manabu619@gmail.com">manabu619@gmail.com</a> までお問い合わせください。
+        </td>
+      </tr>
+      <tr>
+        <th>動作環境</th>
+        <td>
+          インターネット接続環境、メールアドレスをお持ちの方であればご利用いただけます。<br>
+          推奨ブラウザ：Chrome・Safari・Firefox・Edge（最新版）
+        </td>
+      </tr>
+      <tr>
+        <th>お問い合わせ</th>
+        <td>
+          <a href="mailto:manabu619@gmail.com">manabu619@gmail.com</a><br>
+          X（旧Twitter）：<a href="https://x.com/manabu619" target="_blank" rel="noopener">@manabu619</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice">
+    <strong>⚠️ 住所・電話番号のご記載について</strong><br>
+    このページには住所・電話番号の記載が必要です（特定商取引法第11条）。<br>
+    現在プレースホルダーになっています。実際の販売開始前に実値を入力してください。<br>
+    個人情報保護の観点から公開したくない場合は「請求があった場合に遅滞なく開示」という表記で対応できますが、<br>
+    法的リスクを下げるため、できる限り実住所・電話番号の記載を推奨します。弁護士にご確認ください。
+  </div>
+
+  <footer class="page-footer">
+    <p>© 2026 CheerRING（新保 学） All rights reserved.</p>
+    <p style="margin-top:8px;">
+      <a href="../index.html">トップ</a> &nbsp;·&nbsp;
+      <a href="pay.html">Founder Pass</a> &nbsp;·&nbsp;
+      <a href="qa.html">Q&amp;A</a> &nbsp;·&nbsp;
+      <a href="mailto:manabu619@gmail.com">お問い合わせ</a>
+    </p>
+  </footer>
+</div>
+
+</body>
+</html>
